@@ -1,0 +1,43 @@
+#about-our-services {
+  position: relative;
+  overflow: hidden; 
+  padding: 2rem;
+  img {
+    position: absolute;
+    right: 0; 
+    top: 0;
+    height: 100%;
+    width: auto;
+  }
+
+  .container {
+    padding: 2rem;
+    z-index: 1; 
+    .section-title{
+      width: 40%;
+      padding: 0;
+    }
+    p{
+      font-size: 20px;
+      font-style: italic;
+      width: 50%;
+      color: #999999;
+    }
+    .text-container{
+      p{
+        font-size: 14px;
+        @include text;
+        padding-top: 1rem;
+        padding-bottom: .5rem;
+
+      }
+      h4{
+        @include text;
+        font-style: italic;
+
+      }
+    }
+
+
+  }
+}

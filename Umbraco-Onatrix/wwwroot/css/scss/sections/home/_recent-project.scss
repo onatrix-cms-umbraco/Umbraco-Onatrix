@@ -1,0 +1,57 @@
+
+#recent-project {
+  padding-top: 14rem;
+
+  .section-title {
+    text-align: center; 
+  }
+
+  .projects-container {
+    display: flex;
+    justify-content: center; 
+    flex-wrap: nowrap; 
+    overflow-x: auto; 
+    margin: 0 -15rem; 
+
+    .project {
+
+      .image {
+        position: relative; 
+        width: 480px;
+        overflow: hidden; 
+
+        img {
+          width: 100%; 
+          display: block; 
+        }
+
+        .banner {
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          width: 100%;
+          height: 20%;
+          padding: 2rem;
+          background-color: rgba(71, 71, 71, 0.8);
+          color: white;
+          transition: height 0.3s ease-in-out, background-color 0.3s ease-in-out; 
+
+          h6 {
+            margin: 0;
+            font-size: 1rem;
+          }
+
+          p {
+            margin: 0;
+            font-size: 0.875rem;
+          }
+        }
+
+        &:hover .banner {
+          height: 30%; 
+          background-color: #4F5955; 
+        }
+      }
+    }
+  }
+}

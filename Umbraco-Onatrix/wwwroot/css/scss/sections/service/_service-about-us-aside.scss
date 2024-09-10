@@ -1,0 +1,37 @@
+.wrapper-aside{
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+
+  aside{
+    display: flex;
+    padding: 2rem 0;
+
+
+    .about-us-card{
+      margin: 2rem 0;
+      img{
+        width: 100%;
+        margin: 1rem 0;
+      }
+    }
+
+    .help-us-card{
+      padding: 1.5rem;
+      h3{
+        @include text;
+        font-size: 22px;
+      }
+      input{
+        padding: 1rem;
+        width: 100%;
+    
+      }
+    }
+    .vl-line{
+      margin-left: 2rem;
+      border-right: 1px solid #ECECEC;
+      height: auto;
+    }
+  }
+}
+

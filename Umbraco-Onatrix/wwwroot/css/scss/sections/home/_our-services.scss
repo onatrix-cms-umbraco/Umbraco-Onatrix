@@ -1,0 +1,18 @@
+#our-services{
+margin-top: 4rem;
+.container{
+  padding-bottom: 4rem;
+}
+
+.section-title{
+  text-align: center;
+  padding-bottom: 1rem;
+  width: 65%;
+  }
+
+  .cards{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1rem;
+  }
+}

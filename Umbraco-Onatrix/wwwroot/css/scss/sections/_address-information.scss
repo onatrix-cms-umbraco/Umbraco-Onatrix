@@ -1,0 +1,16 @@
+.address-social{
+  p{
+
+    padding: 0;
+  }
+  @include center;
+  justify-content: space-between;
+  .address{
+    flex: auto;
+  }
+  .btn-primary{
+    padding: 1rem 1.5rem;
+    border-radius: 0;
+  }
+
+}

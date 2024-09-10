@@ -1,0 +1,90 @@
+.wrapper {
+  display: grid;
+  grid-template-rows: auto auto 1fr auto;
+  height: 100vh;
+  @include desktop{
+    grid-template-rows: auto auto 1fr auto;
+
+  }
+}
+
+.wrapper-aside-left{
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+
+  aside{
+    display: flex;
+    padding: 2rem 0;
+
+
+    .about-us-card{
+      margin: 2rem 0;
+      img{
+        width: 100%;
+        margin: 1rem 0;
+      }
+    }
+
+    .help-us-card{
+      padding: 1.5rem;
+      h3{
+        @include text;
+        font-size: 22px;
+      }
+      input{
+        padding: 1rem;
+        width: 100%;
+    
+      }
+    }
+    .vl-line{
+      margin-left: 2rem;
+      border-right: 1px solid #ECECEC;
+      height: auto;
+    }
+  }
+}
+
+.wrapper-aside-right{
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+
+  aside{
+    display: flex;
+    padding: 2rem 0;
+
+    .help-us-card{
+      margin-top: 2rem;
+      padding: 1.5rem;
+      h3{
+        @include text;
+        font-size: 22px;
+        
+      }
+      p{
+        font-weight: 300;
+      }
+      input{
+        padding: 1rem;
+        width: 100%;
+    
+      }
+      
+    }
+    h4{
+      font-weight: 500;
+    }
+    .tags{
+
+      a{
+        margin: .6rem .6rem .6rem 0rem;
+      }
+    }
+
+    .vl-line{
+      margin-right: 2rem;
+      border-right: 1px solid #ECECEC;
+      height: auto;
+    }
+  }
+}

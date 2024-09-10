@@ -1,0 +1,95 @@
+.btn-tag-dark{
+  @include tag-colors(--color-dark, --color-light, --color-accent, --color-primary);
+}
+.btn-tag-primary{
+  @include tag-colors(--color-primary, --color-accent, --color-accent, --color-primary);
+}
+.btn-tag-secondary{
+  @include tag-colors(--color-secondary, --color-primary, --color-accent, --color-primary);
+}
+.btn-tag-accent{
+  @include tag-colors(--color-accent, --color-primary, --color-primary, --color-accent);
+}
+.btn-tag-gray{
+  @include tag-colors(--color-gray, --color-primary, --color-accent, --color-primary);
+}
+.btn-tag-light{
+  @include tag-colors(--color-light, --color-primary, --color-accent, --color-primary, --color-border-gray);
+}
+.btn-tag-menu{
+  @include tag-colors(--color-primary, --color-secondary, --color-accent, --color-primary);
+}
+
+
+
+@include theme-tags(
+  'dark',
+  (--color-dark, --color-light, --color-accent, --color-primary, --color-light),
+  (--color-primary, --color-secondary, --color-accent, --color-primary, --color-primary),
+  (--color-secondary, --color-primary, --color-accent, --color-primary, --color-secondary),
+  (--color-accent, --color-primary, --color-primary, --color-secondary, --color-light),
+  (--color-gray, --color-primary, --color-accent, --color-primary, --color-light),
+  (--color-light, --color-primary, --color-accent, --color-primary, --color-light),
+  (--color-primary, --color-secondary, --color-accent, --color-primary, --color-primary),
+
+);
+
+@include theme-tags(
+  'primary',
+  (--color-dark, --color-light, --color-accent, --color-primary, --color-dark),
+  (--color-primary, --color-light, --color-accent, --color-primary, --color-border-primary-light),
+  (--color-secondary, --color-primary, --color-accent, --color-primary, --color-secondary),
+  (--color-accent, --color-primary, --color-primary, --color-secondary, --color-accent, --color-border-secondary),
+  (--color-gray, --color-primary, --color-accent, --color-primary, --color-light),
+  (--color-light, --color-primary, --color-accent, --color-primary, --color-light),
+  (--color-light, --color-primary, --color-accent, --color-primary, --color-light),
+
+);
+
+@include theme-tags(
+  'secondary',
+  (--color-dark, --color-light, --color-accent, --color-primary, --color-light),
+  (--color-primary, --color-secondary, --color-accent, --color-primary, --color-secondary),
+  (--color-secondary, --color-primary, --color-accent, --color-primary, --color-primary),
+  (--color-accent, --color-primary, --color-primary, --color-secondary, --color-accent, --color-border-secondary),
+  (--color-gray, --color-primary, --color-accent, --color-primary, --color-light),
+  (--color-light, --color-primary, --color-accent, --color-primary, --color-light),
+  (--color-primary, --color-secondary, --color-light, --color-primary, --color-light),
+
+);
+@include theme-tags(
+  'accent',
+  (--color-dark, --color-light, --color-accent, --color-primary, --color-light,--color-border-dark),
+  (--color-primary, --color-secondary, --color-accent, --color-primary, --color-secondary, --color-border-primary),
+  (--color-secondary, --color-primary, --color-accent, --color-primary, --color-secondary, --color-border-primary),
+  (--color-accent, --color-primary, --color-primary, --color-secondary, --color-primary, --color-border-secondary),
+  (--color-gray, --color-primary, --color-accent, --color-primary, --color-light,--color-border-secondary),
+  (--color-light, --color-primary, --color-accent, --color-primary, --color-light, --color-border-secondary),
+  (--color-primary, --color-secondary, --color-secondary, --color-primary, --color-light),
+
+);
+
+@include theme-tags(
+  'gray',
+  (--color-dark, --color-light, --color-accent, --color-primary, --color-light,--color-border-dark),
+  (--color-primary, --color-secondary, --color-accent, --color-primary, --color-secondary, --color-border-primary),
+  (--color-secondary, --color-primary, --color-accent, --color-primary, --color-secondary, --color-border-primary),
+  (--color-accent, --color-primary, --color-primary, --color-secondary, --color-primary, --color-border-secondary),
+  (--color-gray, --color-primary, --color-accent, --color-primary, --color-primary,--color-border-secondary),
+  (--color-light, --color-primary, --color-accent, --color-primary, --color-primary, --color-border-secondary),
+  (--color-primary, --color-light, --color-light, --color-dark, --color-dark, --color-border-dark),
+
+);
+@include theme-tags(
+  'light',
+  (--color-dark, --color-light, --color-accent, --color-primary),
+  (--color-primary, --color-accent, --color-accent, --color-primary),
+  (--color-secondary, --color-primary, --color-accent, --color-primary),
+  (--color-accent, --color-primary, --color-primary, --color-secondary),
+  (--color-gray, --color-primary, --color-accent, --color-primary),
+  (--color-light, --color-primary, --color-accent, --color-primary, --color-border-light),
+  (--color-primary, --color-light, --color-accent, --color-primary, --color-light),
+
+);
+
+

@@ -1,0 +1,36 @@
+﻿
+
+
+@using Umbraco.Cms.Web.Common.PublishedModels;
+@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage
+@{
+	Layout = "mainLayout.cshtml";
+}
+
+@{
+	var selection = Umbraco.Content(Guid.Parse("a80c8b14-af45-408b-861a-ed1c94b35ad7"))
+    .ChildrenOfType("serviceItemTemplate")
+    .Where(x => x.IsVisible());
+}
+@await Html.PartialAsync("partials/static/breadcrumb.cshtml")
+<section id="our-services" class="bg-light">
+  <div class="container">
+    <div class="container section-title">
+      <h2>@Model.Value("customHeadline")</h2>
+    </div>
+	@foreach (var item in selection)
+	{
+    var image = item.Value<IPublishedContent>("thumbnailImage").Url() ?? "";
+    var preamble = item.Value<string>("preamble") ?? "";
+
+    <div class="cards">
+      <a href="@item.Url()" class="card">
+        <h5 class="bg-light">@item.Name</h5>
+        <img src="@image" alt="Beskrivning av bilden">
+        <p class="bg-light">@preamble </p>
+      </a>
+      
+    </div>
+	}
+    </div>
+</section>

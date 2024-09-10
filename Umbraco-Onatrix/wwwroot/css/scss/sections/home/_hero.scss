@@ -1,0 +1,30 @@
+#hero-section {
+  position: relative; 
+  overflow: hidden; 
+
+  img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    z-index: -2; 
+  }
+
+  .hero {
+    position: relative;
+    z-index: 1; 
+    color: white; 
+    text-align: left; 
+    padding: 3rem;
+    h1{
+      padding-top: 1rem;
+      width: 50%;
+    }
+    p{
+      width: 50%;
+    }
+   
+  }
+}

@@ -1,0 +1,39 @@
+﻿@using Umbraco.Cms.Web.Common.PublishedModels;
+@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage
+@{
+	Layout = null;
+  var keywordsList = Model.Value<IEnumerable<string>>("pageKeywords");
+  // var keywords = keywordsList != null ? string.Join(",", keywordsList) : "";
+
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="@Model.Value("pageDescription")">
+    <meta name="keywords" content="">
+
+    <link rel="stylesheet" href="https://kit.fontawesome.com/a576612222.css">
+    <link rel="stylesheet" href="~/css/scss/main.min.css">
+    <link rel="stylesheet" href="~/css/theme.css">
+    <title>@Model.Value("pageTitle")</title>
+</head>
+<body>
+    <div class="wrapper">
+       @await Html.PartialAsync("partials/static/topbar.cshtml")
+
+       @await Html.PartialAsync("partials/static/header.cshtml")
+
+      <main>
+        @RenderBody()
+  
+
+      </main>
+       @await Html.PartialAsync("partials/static/footer.cshtml")
+
+    </div>
+</body>
+</html>
+

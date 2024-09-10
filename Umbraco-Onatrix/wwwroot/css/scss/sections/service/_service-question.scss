@@ -1,0 +1,24 @@
+#question{
+  padding-top: 2rem;
+  padding-bottom: 3rem;
+  .form-question{
+
+    .grid-area{
+      display: grid;
+      gap: 0 1.5rem;
+      grid-template-areas: 'name-input email'
+                            'textarea textarea';
+    }
+    .name{
+      grid-area: name-input;
+    }
+    .email{
+      grid-area: email;
+    }
+    textarea{
+      grid-area: textarea;
+  
+    }
+
+  }
+}

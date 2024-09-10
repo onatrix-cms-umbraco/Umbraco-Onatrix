@@ -1,0 +1,124 @@
+.card {
+  @include card;
+  border: 1px solid #eaeaea;
+
+}
+
+.card-form{
+  display: grid;
+  width: 470px;
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+
+  h3{
+    padding: 1.5rem;
+  }
+  p{
+    font-size: 13px;
+    padding: 1rem;
+    font-style: italic;
+  }
+  input{
+    padding: 1rem;
+    margin: 1rem;
+
+  }
+  select{
+    padding: 1rem;
+    margin: 1rem;
+  }
+  .btn-accent{
+    padding: 1rem;
+    margin: 1rem;
+    text-align: center;
+  }
+}
+
+form{
+  input{
+    padding: 1rem;
+    margin: 1rem 0;
+    width: 100%;
+    border: 1px solid #EBEBEB;
+    border-radius: 2px;
+    font-family: "Poppins", sans-serif;
+    font-style: italic;
+
+  }
+  textarea{
+    padding: 1rem;
+    margin: 1rem 0;
+    width: 100%;
+    border: 1px solid #EBEBEB;
+    border-radius: 2px;
+    height: 200px;
+    font-family: "Poppins", sans-serif;
+    font-style: italic;
+    resize: none;
+
+  }
+  select{
+    padding: 1rem;
+    margin: 1rem 0;
+    width: 100%;
+    border: 1px solid #EBEBEB;
+    border-radius: 2px;
+    font-family: "Poppins", sans-serif;
+    resize: none;
+  }
+}
+
+.section-contact{
+ .container{
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 10rem 0;
+
+
+  .person{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: 3;
+
+  }
+  .square{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: 2;
+  }
+  .dots{
+    position: absolute;
+    left: 30%;
+    bottom: 0;
+    z-index: 1;
+  }
+
+  .text-container{
+    margin: auto;
+    width: 70%;
+    .contact-information{
+      display: flex;
+      padding-top: 1rem;
+      margin-bottom: 1.5rem;
+      i{
+        color: #D9C3A9;
+        margin-right: .4rem;
+        font-size: 1.2rem;
+      }
+      h6{
+        color: #4F5955;
+
+      }
+      p{
+        color:#535656;
+        font-size: .8rem;
+      }
+    }
+  }
+ }
+}
+
+
+

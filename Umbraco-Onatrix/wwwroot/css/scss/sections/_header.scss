@@ -1,0 +1,40 @@
+.shadow{
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+
+  .nav-bar{
+    @include grid;
+    padding: 2rem;
+    grid-template-columns: 1fr 2fr 1fr;
+    .nav{
+      @include center;
+      justify-content: space-between;
+      h5{
+        margin: 0;
+      }
+    }
+    i{
+      display: flex;
+      justify-content: end;
+    }
+  }
+}
+
+#header-nav{
+  padding: 4rem;
+  h2{
+    text-align: center;
+    margin: 0;
+  }
+  nav{
+    display: flex;
+    justify-content: center;
+    padding: 2rem;
+    gap: .5rem;
+    h6{
+      @include text;
+      margin: 0;
+      padding: 0;
+      color: #4F5955;
+    }
+  }
+}

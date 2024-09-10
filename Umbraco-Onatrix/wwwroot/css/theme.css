@@ -1,0 +1,1926 @@
+:root {
+  --color-default: #535656;
+  --color-dark: #171717;
+  --color-primary: #4F5955;
+  --color-primary-light: #6d7573;
+  --color-primary-dark: #2f3331;
+  --color-secondary: #D9C3A9;
+  --color-accent: #F2EDDC;
+  --color-gray: #F7F7F7;
+  --color-light: #FFFFFF;
+  --color-border-dark: #333333;
+  --color-border-dark-transparent: rgba(51, 51, 51, 0.10);
+  --color-border-primary: #424946;
+  --color-border-primary-light: #606966;
+  --color-border-secondary: #c0ac94;
+  --color-border-accent: #d5d1c2;
+  --color-border-gray: #e3e3e3;
+  --color-border-light: #eeeeee;
+  --color-border-light-transparent: rgba(255, 255, 255, 0.95);
+}
+
+:root.dark-theme {
+  --color-dark: #e0e0e0;
+  --color-primary: #a3b3af;
+  --color-primary-light: #c1ccc9;
+  --color-primary-dark: #6f7976;
+  --color-secondary: #3c2f26;
+  --color-accent: #1a1a1a;
+  --color-gray: #2b2b2b;
+  --color-light: #171717;
+  --color-border-dark: #cccccc;
+  --color-border-dark-transparent: rgba(204, 204, 204, 0.10);
+  --color-border-primary: #b6bcb9;
+  --color-border-secondary: #43292e;
+  --color-border-accent: #2a2925;
+  --color-border-gray: #474747;
+  --color-border-light: #2c2c2c;
+  --color-border-light-transparent: rgba(23, 23, 23, 0.95);
+}
+
+body {
+  color: var(--color-default);
+}
+
+a {
+  color: var(--color-secondary);
+}
+a:hover, a:focus, a:active {
+  color: var(--color-primary);
+}
+
+.bg-dark a {
+  color: var(--color-light);
+}
+.bg-dark a:hover, .bg-dark a:focus, .bg-dark a:active {
+  color: var(--color-accent);
+}
+
+.bg-primary a {
+  color: var(--color-secondary);
+}
+.bg-primary a:hover, .bg-primary a:focus, .bg-primary a:active {
+  color: var(--color-accent);
+}
+
+.bg-secondary a {
+  color: var(--color-light);
+}
+.bg-secondary a:hover, .bg-secondary a:focus, .bg-secondary a:active {
+  color: var(--color-light);
+}
+
+.bg-accent a {
+  color: var(--color-secondary);
+}
+.bg-accent a:hover, .bg-accent a:focus, .bg-accent a:active {
+  color: var(--color-primary);
+}
+
+.bg-gray a {
+  color: var(--color-secondary);
+}
+.bg-gray a:hover, .bg-gray a:focus, .bg-gray a:active {
+  color: var(--color-primary);
+}
+
+.bg-light a {
+  color: var(--color-secondary);
+}
+.bg-light a:hover, .bg-light a:focus, .bg-light a:active {
+  color: var(--color-primary);
+}
+
+.btn-dark {
+  background-color: var(--color-dark);
+  color: var(--color-light);
+  border-color: var(--color-dark);
+  outline: none !important;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+.btn-dark:hover {
+  background-color: var(--color-accent);
+  color: var(--color-primary);
+  border-color: var(--color-accent);
+}
+.btn-dark:hover, .btn-dark:focus, .btn-dark:active {
+  outline: none !important;
+}
+
+.btn-primary {
+  background-color: var(--color-primary);
+  color: var(--color-accent);
+  border-color: var(--color-primary);
+  outline: none !important;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+.btn-primary:hover {
+  background-color: var(--color-accent);
+  color: var(--color-primary);
+  border-color: var(--color-accent);
+}
+.btn-primary:hover, .btn-primary:focus, .btn-primary:active {
+  outline: none !important;
+}
+
+.btn-secondary {
+  background-color: var(--color-secondary);
+  color: var(--color-primary);
+  border-color: var(--color-secondary);
+  outline: none !important;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+.btn-secondary:hover {
+  background-color: var(--color-accent);
+  color: var(--color-primary);
+  border-color: var(--color-accent);
+}
+.btn-secondary:hover, .btn-secondary:focus, .btn-secondary:active {
+  outline: none !important;
+}
+
+.btn-accent {
+  background-color: var(--color-accent);
+  color: var(--color-primary);
+  border-color: var(--color-accent);
+  outline: none !important;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+.btn-accent:hover {
+  background-color: var(--color-primary);
+  color: var(--color-accent);
+  border-color: var(--color-primary);
+}
+.btn-accent:hover, .btn-accent:focus, .btn-accent:active {
+  outline: none !important;
+}
+
+.btn-gray {
+  background-color: var(--color-gray);
+  color: var(--color-primary);
+  border-color: var(--color-gray);
+  outline: none !important;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+.btn-gray:hover {
+  background-color: var(--color-accent);
+  color: var(--color-primary);
+  border-color: var(--color-accent);
+}
+.btn-gray:hover, .btn-gray:focus, .btn-gray:active {
+  outline: none !important;
+}
+
+.btn-light {
+  background-color: var(--color-light);
+  color: var(--color-primary);
+  border-color: var(--color-border-gray);
+  outline: none !important;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+.btn-light:hover {
+  background-color: var(--color-accent);
+  color: var(--color-primary);
+  border-color: var(--color-accent);
+}
+.btn-light:hover, .btn-light:focus, .btn-light:active {
+  outline: none !important;
+}
+
+.btn-menu {
+  background-color: var(--color-primary);
+  color: var(--color-secondary);
+  border-color: var(--color-primary);
+  outline: none !important;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+.btn-menu:hover {
+  background-color: var(--color-accent);
+  color: var(--color-primary);
+  border-color: var(--color-accent);
+}
+.btn-menu:hover, .btn-menu:focus, .btn-menu:active {
+  outline: none !important;
+}
+
+.bg-dark .btn-dark {
+  background-color: var(--color-dark);
+  color: var(--color-light);
+  border-color: var(--color-light);
+  outline: none !important;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+.bg-dark .btn-dark:hover {
+  background-color: var(--color-accent);
+  color: var(--color-primary);
+  border-color: var(--color-accent);
+}
+.bg-dark .btn-dark:hover, .bg-dark .btn-dark:focus, .bg-dark .btn-dark:active {
+  outline: none !important;
+}
+.bg-dark .btn-primary {
+  background-color: var(--color-primary);
+  color: var(--color-secondary);
+  border-color: var(--color-primary);
+  outline: none !important;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+.bg-dark .btn-primary:hover {
+  background-color: var(--color-accent);
+  color: var(--color-primary);
+  border-color: var(--color-accent);
+}
+.bg-dark .btn-primary:hover, .bg-dark .btn-primary:focus, .bg-dark .btn-primary:active {
+  outline: none !important;
+}
+.bg-dark .btn-secondary {
+  background-color: var(--color-secondary);
+  color: var(--color-primary);
+  border-color: var(--color-secondary);
+  outline: none !important;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+.bg-dark .btn-secondary:hover {
+  background-color: var(--color-accent);
+  color: var(--color-primary);
+  border-color: var(--color-accent);
+}
+.bg-dark .btn-secondary:hover, .bg-dark .btn-secondary:focus, .bg-dark .btn-secondary:active {
+  outline: none !important;
+}
+.bg-dark .btn-accent {
+  background-color: var(--color-accent);
+  color: var(--color-primary);
+  border-color: var(--color-light);
+  outline: none !important;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+.bg-dark .btn-accent:hover {
+  background-color: var(--color-primary);
+  color: var(--color-secondary);
+  border-color: var(--color-primary);
+}
+.bg-dark .btn-accent:hover, .bg-dark .btn-accent:focus, .bg-dark .btn-accent:active {
+  outline: none !important;
+}
+.bg-dark .btn-gray {
+  background-color: var(--color-gray);
+  color: var(--color-primary);
+  border-color: var(--color-light);
+  outline: none !important;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+.bg-dark .btn-gray:hover {
+  background-color: var(--color-accent);
+  color: var(--color-primary);
+  border-color: var(--color-accent);
+}
+.bg-dark .btn-gray:hover, .bg-dark .btn-gray:focus, .bg-dark .btn-gray:active {
+  outline: none !important;
+}
+.bg-dark .btn-light {
+  background-color: var(--color-light);
+  color: var(--color-primary);
+  border-color: var(--color-light);
+  outline: none !important;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+.bg-dark .btn-light:hover {
+  background-color: var(--color-accent);
+  color: var(--color-primary);
+  border-color: var(--color-accent);
+}
+.bg-dark .btn-light:hover, .bg-dark .btn-light:focus, .bg-dark .btn-light:active {
+  outline: none !important;
+}
+.bg-dark .btn-menu {
+  background-color: var(--color-primary);
+  color: var(--color-secondary);
+  border-color: var(--color-primary);
+  outline: none !important;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+.bg-dark .btn-menu:hover {
+  background-color: var(--color-accent);
+  color: var(--color-primary);
+  border-color: var(--color-accent);
+}
+.bg-dark .btn-menu:hover, .bg-dark .btn-menu:focus, .bg-dark .btn-menu:active {
+  outline: none !important;
+}
+
+.bg-primary .btn-dark {
+  background-color: var(--color-dark);
+  color: var(--color-light);
+  border-color: var(--color-dark);
+  outline: none !important;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+.bg-primary .btn-dark:hover {
+  background-color: var(--color-accent);
+  color: var(--color-primary);
+  border-color: var(--color-accent);
+}
+.bg-primary .btn-dark:hover, .bg-primary .btn-dark:focus, .bg-primary .btn-dark:active {
+  outline: none !important;
+}
+.bg-primary .btn-primary {
+  background-color: var(--color-primary);
+  color: var(--color-light);
+  border-color: var(--color-border-primary-light);
+  outline: none !important;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+.bg-primary .btn-primary:hover {
+  background-color: var(--color-accent);
+  color: var(--color-primary);
+  border-color: var(--color-accent);
+}
+.bg-primary .btn-primary:hover, .bg-primary .btn-primary:focus, .bg-primary .btn-primary:active {
+  outline: none !important;
+}
+.bg-primary .btn-secondary {
+  background-color: var(--color-secondary);
+  color: var(--color-primary);
+  border-color: var(--color-secondary);
+  outline: none !important;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+.bg-primary .btn-secondary:hover {
+  background-color: var(--color-accent);
+  color: var(--color-primary);
+  border-color: var(--color-accent);
+}
+.bg-primary .btn-secondary:hover, .bg-primary .btn-secondary:focus, .bg-primary .btn-secondary:active {
+  outline: none !important;
+}
+.bg-primary .btn-accent {
+  background-color: var(--color-accent);
+  color: var(--color-primary);
+  border-color: var(--color-accent);
+  outline: none !important;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+.bg-primary .btn-accent:hover {
+  background-color: var(--color-primary);
+  color: var(--color-secondary);
+  border-color: var(--color-border-secondary);
+}
+.bg-primary .btn-accent:hover, .bg-primary .btn-accent:focus, .bg-primary .btn-accent:active {
+  outline: none !important;
+}
+.bg-primary .btn-gray {
+  background-color: var(--color-gray);
+  color: var(--color-primary);
+  border-color: var(--color-light);
+  outline: none !important;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+.bg-primary .btn-gray:hover {
+  background-color: var(--color-accent);
+  color: var(--color-primary);
+  border-color: var(--color-accent);
+}
+.bg-primary .btn-gray:hover, .bg-primary .btn-gray:focus, .bg-primary .btn-gray:active {
+  outline: none !important;
+}
+.bg-primary .btn-light {
+  background-color: var(--color-light);
+  color: var(--color-primary);
+  border-color: var(--color-light);
+  outline: none !important;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+.bg-primary .btn-light:hover {
+  background-color: var(--color-accent);
+  color: var(--color-primary);
+  border-color: var(--color-accent);
+}
+.bg-primary .btn-light:hover, .bg-primary .btn-light:focus, .bg-primary .btn-light:active {
+  outline: none !important;
+}
+.bg-primary .btn-menu {
+  background-color: var(--color-light);
+  color: var(--color-primary);
+  border-color: var(--color-light);
+  outline: none !important;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+.bg-primary .btn-menu:hover {
+  background-color: var(--color-accent);
+  color: var(--color-primary);
+  border-color: var(--color-accent);
+}
+.bg-primary .btn-menu:hover, .bg-primary .btn-menu:focus, .bg-primary .btn-menu:active {
+  outline: none !important;
+}
+
+.bg-secondary .btn-dark {
+  background-color: var(--color-dark);
+  color: var(--color-light);
+  border-color: var(--color-light);
+  outline: none !important;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+.bg-secondary .btn-dark:hover {
+  background-color: var(--color-accent);
+  color: var(--color-primary);
+  border-color: var(--color-accent);
+}
+.bg-secondary .btn-dark:hover, .bg-secondary .btn-dark:focus, .bg-secondary .btn-dark:active {
+  outline: none !important;
+}
+.bg-secondary .btn-primary {
+  background-color: var(--color-primary);
+  color: var(--color-secondary);
+  border-color: var(--color-secondary);
+  outline: none !important;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+.bg-secondary .btn-primary:hover {
+  background-color: var(--color-accent);
+  color: var(--color-primary);
+  border-color: var(--color-accent);
+}
+.bg-secondary .btn-primary:hover, .bg-secondary .btn-primary:focus, .bg-secondary .btn-primary:active {
+  outline: none !important;
+}
+.bg-secondary .btn-secondary {
+  background-color: var(--color-secondary);
+  color: var(--color-primary);
+  border-color: var(--color-primary);
+  outline: none !important;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+.bg-secondary .btn-secondary:hover {
+  background-color: var(--color-accent);
+  color: var(--color-primary);
+  border-color: var(--color-accent);
+}
+.bg-secondary .btn-secondary:hover, .bg-secondary .btn-secondary:focus, .bg-secondary .btn-secondary:active {
+  outline: none !important;
+}
+.bg-secondary .btn-accent {
+  background-color: var(--color-accent);
+  color: var(--color-primary);
+  border-color: var(--color-accent);
+  outline: none !important;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+.bg-secondary .btn-accent:hover {
+  background-color: var(--color-primary);
+  color: var(--color-secondary);
+  border-color: var(--color-border-secondary);
+}
+.bg-secondary .btn-accent:hover, .bg-secondary .btn-accent:focus, .bg-secondary .btn-accent:active {
+  outline: none !important;
+}
+.bg-secondary .btn-gray {
+  background-color: var(--color-gray);
+  color: var(--color-primary);
+  border-color: var(--color-light);
+  outline: none !important;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+.bg-secondary .btn-gray:hover {
+  background-color: var(--color-accent);
+  color: var(--color-primary);
+  border-color: var(--color-accent);
+}
+.bg-secondary .btn-gray:hover, .bg-secondary .btn-gray:focus, .bg-secondary .btn-gray:active {
+  outline: none !important;
+}
+.bg-secondary .btn-light {
+  background-color: var(--color-light);
+  color: var(--color-primary);
+  border-color: var(--color-light);
+  outline: none !important;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+.bg-secondary .btn-light:hover {
+  background-color: var(--color-accent);
+  color: var(--color-primary);
+  border-color: var(--color-accent);
+}
+.bg-secondary .btn-light:hover, .bg-secondary .btn-light:focus, .bg-secondary .btn-light:active {
+  outline: none !important;
+}
+.bg-secondary .btn-menu {
+  background-color: var(--color-primary);
+  color: var(--color-secondary);
+  border-color: var(--color-light);
+  outline: none !important;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+.bg-secondary .btn-menu:hover {
+  background-color: var(--color-light);
+  color: var(--color-primary);
+  border-color: var(--color-light);
+}
+.bg-secondary .btn-menu:hover, .bg-secondary .btn-menu:focus, .bg-secondary .btn-menu:active {
+  outline: none !important;
+}
+
+.bg-accent .btn-dark {
+  background-color: var(--color-dark);
+  color: var(--color-light);
+  border-color: var(--color-light);
+  outline: none !important;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+.bg-accent .btn-dark:hover {
+  background-color: var(--color-accent);
+  color: var(--color-primary);
+  border-color: var(--color-border-dark);
+}
+.bg-accent .btn-dark:hover, .bg-accent .btn-dark:focus, .bg-accent .btn-dark:active {
+  outline: none !important;
+}
+.bg-accent .btn-primary {
+  background-color: var(--color-primary);
+  color: var(--color-secondary);
+  border-color: var(--color-secondary);
+  outline: none !important;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+.bg-accent .btn-primary:hover {
+  background-color: var(--color-accent);
+  color: var(--color-primary);
+  border-color: var(--color-border-primary);
+}
+.bg-accent .btn-primary:hover, .bg-accent .btn-primary:focus, .bg-accent .btn-primary:active {
+  outline: none !important;
+}
+.bg-accent .btn-secondary {
+  background-color: var(--color-secondary);
+  color: var(--color-primary);
+  border-color: var(--color-secondary);
+  outline: none !important;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+.bg-accent .btn-secondary:hover {
+  background-color: var(--color-accent);
+  color: var(--color-primary);
+  border-color: var(--color-border-primary);
+}
+.bg-accent .btn-secondary:hover, .bg-accent .btn-secondary:focus, .bg-accent .btn-secondary:active {
+  outline: none !important;
+}
+.bg-accent .btn-accent {
+  background-color: var(--color-accent);
+  color: var(--color-primary);
+  border-color: var(--color-primary);
+  outline: none !important;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+.bg-accent .btn-accent:hover {
+  background-color: var(--color-primary);
+  color: var(--color-secondary);
+  border-color: var(--color-border-secondary);
+}
+.bg-accent .btn-accent:hover, .bg-accent .btn-accent:focus, .bg-accent .btn-accent:active {
+  outline: none !important;
+}
+.bg-accent .btn-gray {
+  background-color: var(--color-gray);
+  color: var(--color-primary);
+  border-color: var(--color-light);
+  outline: none !important;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+.bg-accent .btn-gray:hover {
+  background-color: var(--color-accent);
+  color: var(--color-primary);
+  border-color: var(--color-border-secondary);
+}
+.bg-accent .btn-gray:hover, .bg-accent .btn-gray:focus, .bg-accent .btn-gray:active {
+  outline: none !important;
+}
+.bg-accent .btn-light {
+  background-color: var(--color-light);
+  color: var(--color-primary);
+  border-color: var(--color-light);
+  outline: none !important;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+.bg-accent .btn-light:hover {
+  background-color: var(--color-accent);
+  color: var(--color-primary);
+  border-color: var(--color-border-secondary);
+}
+.bg-accent .btn-light:hover, .bg-accent .btn-light:focus, .bg-accent .btn-light:active {
+  outline: none !important;
+}
+.bg-accent .btn-menu {
+  background-color: var(--color-primary);
+  color: var(--color-secondary);
+  border-color: var(--color-light);
+  outline: none !important;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+.bg-accent .btn-menu:hover {
+  background-color: var(--color-secondary);
+  color: var(--color-primary);
+  border-color: var(--color-secondary);
+}
+.bg-accent .btn-menu:hover, .bg-accent .btn-menu:focus, .bg-accent .btn-menu:active {
+  outline: none !important;
+}
+
+.bg-gray .btn-dark {
+  background-color: var(--color-dark);
+  color: var(--color-light);
+  border-color: var(--color-light);
+  outline: none !important;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+.bg-gray .btn-dark:hover {
+  background-color: var(--color-accent);
+  color: var(--color-primary);
+  border-color: var(--color-border-dark);
+}
+.bg-gray .btn-dark:hover, .bg-gray .btn-dark:focus, .bg-gray .btn-dark:active {
+  outline: none !important;
+}
+.bg-gray .btn-primary {
+  background-color: var(--color-primary);
+  color: var(--color-secondary);
+  border-color: var(--color-secondary);
+  outline: none !important;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+.bg-gray .btn-primary:hover {
+  background-color: var(--color-accent);
+  color: var(--color-primary);
+  border-color: var(--color-border-primary);
+}
+.bg-gray .btn-primary:hover, .bg-gray .btn-primary:focus, .bg-gray .btn-primary:active {
+  outline: none !important;
+}
+.bg-gray .btn-secondary {
+  background-color: var(--color-secondary);
+  color: var(--color-primary);
+  border-color: var(--color-secondary);
+  outline: none !important;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+.bg-gray .btn-secondary:hover {
+  background-color: var(--color-accent);
+  color: var(--color-primary);
+  border-color: var(--color-border-primary);
+}
+.bg-gray .btn-secondary:hover, .bg-gray .btn-secondary:focus, .bg-gray .btn-secondary:active {
+  outline: none !important;
+}
+.bg-gray .btn-accent {
+  background-color: var(--color-accent);
+  color: var(--color-primary);
+  border-color: var(--color-primary);
+  outline: none !important;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+.bg-gray .btn-accent:hover {
+  background-color: var(--color-primary);
+  color: var(--color-secondary);
+  border-color: var(--color-border-secondary);
+}
+.bg-gray .btn-accent:hover, .bg-gray .btn-accent:focus, .bg-gray .btn-accent:active {
+  outline: none !important;
+}
+.bg-gray .btn-gray {
+  background-color: var(--color-gray);
+  color: var(--color-primary);
+  border-color: var(--color-primary);
+  outline: none !important;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+.bg-gray .btn-gray:hover {
+  background-color: var(--color-accent);
+  color: var(--color-primary);
+  border-color: var(--color-border-secondary);
+}
+.bg-gray .btn-gray:hover, .bg-gray .btn-gray:focus, .bg-gray .btn-gray:active {
+  outline: none !important;
+}
+.bg-gray .btn-light {
+  background-color: var(--color-light);
+  color: var(--color-primary);
+  border-color: var(--color-primary);
+  outline: none !important;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+.bg-gray .btn-light:hover {
+  background-color: var(--color-accent);
+  color: var(--color-primary);
+  border-color: var(--color-border-secondary);
+}
+.bg-gray .btn-light:hover, .bg-gray .btn-light:focus, .bg-gray .btn-light:active {
+  outline: none !important;
+}
+.bg-gray .btn-menu {
+  background-color: var(--color-primary);
+  color: var(--color-light);
+  border-color: var(--color-dark);
+  outline: none !important;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+.bg-gray .btn-menu:hover {
+  background-color: var(--color-light);
+  color: var(--color-dark);
+  border-color: var(--color-border-dark);
+}
+.bg-gray .btn-menu:hover, .bg-gray .btn-menu:focus, .bg-gray .btn-menu:active {
+  outline: none !important;
+}
+
+.bg-light .btn-dark {
+  background-color: var(--color-dark);
+  color: var(--color-light);
+  border-color: var(--color-dark);
+  outline: none !important;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+.bg-light .btn-dark:hover {
+  background-color: var(--color-accent);
+  color: var(--color-primary);
+  border-color: var(--color-accent);
+}
+.bg-light .btn-dark:hover, .bg-light .btn-dark:focus, .bg-light .btn-dark:active {
+  outline: none !important;
+}
+.bg-light .btn-primary {
+  background-color: var(--color-primary);
+  color: var(--color-accent);
+  border-color: var(--color-primary);
+  outline: none !important;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+.bg-light .btn-primary:hover {
+  background-color: var(--color-accent);
+  color: var(--color-primary);
+  border-color: var(--color-accent);
+}
+.bg-light .btn-primary:hover, .bg-light .btn-primary:focus, .bg-light .btn-primary:active {
+  outline: none !important;
+}
+.bg-light .btn-secondary {
+  background-color: var(--color-secondary);
+  color: var(--color-primary);
+  border-color: var(--color-secondary);
+  outline: none !important;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+.bg-light .btn-secondary:hover {
+  background-color: var(--color-accent);
+  color: var(--color-primary);
+  border-color: var(--color-accent);
+}
+.bg-light .btn-secondary:hover, .bg-light .btn-secondary:focus, .bg-light .btn-secondary:active {
+  outline: none !important;
+}
+.bg-light .btn-accent {
+  background-color: var(--color-accent);
+  color: var(--color-primary);
+  border-color: var(--color-accent);
+  outline: none !important;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+.bg-light .btn-accent:hover {
+  background-color: var(--color-primary);
+  color: var(--color-secondary);
+  border-color: var(--color-primary);
+}
+.bg-light .btn-accent:hover, .bg-light .btn-accent:focus, .bg-light .btn-accent:active {
+  outline: none !important;
+}
+.bg-light .btn-gray {
+  background-color: var(--color-gray);
+  color: var(--color-primary);
+  border-color: var(--color-gray);
+  outline: none !important;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+.bg-light .btn-gray:hover {
+  background-color: var(--color-accent);
+  color: var(--color-primary);
+  border-color: var(--color-accent);
+}
+.bg-light .btn-gray:hover, .bg-light .btn-gray:focus, .bg-light .btn-gray:active {
+  outline: none !important;
+}
+.bg-light .btn-light {
+  background-color: var(--color-light);
+  color: var(--color-primary);
+  border-color: var(--color-border-light);
+  outline: none !important;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+.bg-light .btn-light:hover {
+  background-color: var(--color-accent);
+  color: var(--color-primary);
+  border-color: var(--color-accent);
+}
+.bg-light .btn-light:hover, .bg-light .btn-light:focus, .bg-light .btn-light:active {
+  outline: none !important;
+}
+.bg-light .btn-menu {
+  background-color: var(--color-primary);
+  color: var(--color-light);
+  border-color: var(--color-light);
+  outline: none !important;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+.bg-light .btn-menu:hover {
+  background-color: var(--color-accent);
+  color: var(--color-primary);
+  border-color: var(--color-accent);
+}
+.bg-light .btn-menu:hover, .bg-light .btn-menu:focus, .bg-light .btn-menu:active {
+  outline: none !important;
+}
+
+h1 {
+  color: var(--color-primary);
+}
+
+h2 {
+  color: var(--color-primary);
+}
+
+h3 {
+  color: var(--color-secondary);
+}
+
+h4 {
+  color: var(--color-primary);
+}
+
+h5 {
+  color: var(--color-primary);
+}
+
+h6 {
+  color: var(--color-secondary);
+}
+
+.bg-dark h1 {
+  color: var(--color-primary);
+}
+.bg-dark h2 {
+  color: var(--color-primary);
+}
+.bg-dark h3 {
+  color: var(--color-secondary);
+}
+.bg-dark h4 {
+  color: var(--color-primary);
+}
+.bg-dark h5 {
+  color: var(--color-primary);
+}
+.bg-dark h6 {
+  color: var(--color-secondary);
+}
+
+.bg-primary h1 {
+  color: var(--color-light);
+}
+.bg-primary h2 {
+  color: var(--color-light);
+}
+.bg-primary h3 {
+  color: var(--color-accent);
+}
+.bg-primary h4 {
+  color: var(--color-light);
+}
+.bg-primary h5 {
+  color: var(--color-light);
+}
+.bg-primary h6 {
+  color: var(--color-secondary);
+}
+
+.bg-secondary h1 {
+  color: var(--color-primary);
+}
+.bg-secondary h2 {
+  color: var(--color-primary);
+}
+.bg-secondary h3 {
+  color: var(--color-accent);
+}
+.bg-secondary h4 {
+  color: var(--color-primary);
+}
+.bg-secondary h5 {
+  color: var(--color-primary);
+}
+.bg-secondary h6 {
+  color: var(--color-accent);
+}
+
+.bg-accent h1 {
+  color: var(--color-primary);
+}
+.bg-accent h2 {
+  color: var(--color-primary);
+}
+.bg-accent h3 {
+  color: var(--color-secondary);
+}
+.bg-accent h4 {
+  color: var(--color-primary);
+}
+.bg-accent h5 {
+  color: var(--color-primary);
+}
+.bg-accent h6 {
+  color: var(--color-secondary);
+}
+
+.bg-gray h1 {
+  color: var(--color-primary);
+}
+.bg-gray h2 {
+  color: var(--color-primary);
+}
+.bg-gray h3 {
+  color: var(--color-secondary);
+}
+.bg-gray h4 {
+  color: var(--color-primary);
+}
+.bg-gray h5 {
+  color: var(--color-primary);
+}
+.bg-gray h6 {
+  color: var(--color-secondary);
+}
+
+.bg-light h1 {
+  color: var(--color-primary);
+}
+.bg-light h2 {
+  color: var(--color-primary);
+}
+.bg-light h3 {
+  color: var(--color-secondary);
+}
+.bg-light h4 {
+  color: var(--color-primary);
+}
+.bg-light h5 {
+  color: var(--color-primary);
+}
+.bg-light h6 {
+  color: var(--color-secondary);
+}
+
+.btn-tag-dark {
+  background-color: var(--color-dark);
+  color: var(--color-light);
+  border-color: var(--color-dark);
+  outline: none !important;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+.btn-tag-dark:hover {
+  background-color: var(--color-accent);
+  color: var(--color-primary);
+  border-color: var(--color-accent);
+}
+.btn-tag-dark:hover, .btn-tag-dark:focus, .btn-tag-dark:active {
+  outline: none !important;
+}
+
+.btn-tag-primary {
+  background-color: var(--color-primary);
+  color: var(--color-accent);
+  border-color: var(--color-primary);
+  outline: none !important;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+.btn-tag-primary:hover {
+  background-color: var(--color-accent);
+  color: var(--color-primary);
+  border-color: var(--color-accent);
+}
+.btn-tag-primary:hover, .btn-tag-primary:focus, .btn-tag-primary:active {
+  outline: none !important;
+}
+
+.btn-tag-secondary {
+  background-color: var(--color-secondary);
+  color: var(--color-primary);
+  border-color: var(--color-secondary);
+  outline: none !important;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+.btn-tag-secondary:hover {
+  background-color: var(--color-accent);
+  color: var(--color-primary);
+  border-color: var(--color-accent);
+}
+.btn-tag-secondary:hover, .btn-tag-secondary:focus, .btn-tag-secondary:active {
+  outline: none !important;
+}
+
+.btn-tag-accent {
+  background-color: var(--color-accent);
+  color: var(--color-primary);
+  border-color: var(--color-accent);
+  outline: none !important;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+.btn-tag-accent:hover {
+  background-color: var(--color-primary);
+  color: var(--color-accent);
+  border-color: var(--color-primary);
+}
+.btn-tag-accent:hover, .btn-tag-accent:focus, .btn-tag-accent:active {
+  outline: none !important;
+}
+
+.btn-tag-gray {
+  background-color: var(--color-gray);
+  color: var(--color-primary);
+  border-color: var(--color-gray);
+  outline: none !important;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+.btn-tag-gray:hover {
+  background-color: var(--color-accent);
+  color: var(--color-primary);
+  border-color: var(--color-accent);
+}
+.btn-tag-gray:hover, .btn-tag-gray:focus, .btn-tag-gray:active {
+  outline: none !important;
+}
+
+.btn-tag-light {
+  background-color: var(--color-light);
+  color: var(--color-primary);
+  border-color: var(--color-border-gray);
+  outline: none !important;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+.btn-tag-light:hover {
+  background-color: var(--color-accent);
+  color: var(--color-primary);
+  border-color: var(--color-accent);
+}
+.btn-tag-light:hover, .btn-tag-light:focus, .btn-tag-light:active {
+  outline: none !important;
+}
+
+.btn-tag-menu {
+  background-color: var(--color-primary);
+  color: var(--color-secondary);
+  border-color: var(--color-primary);
+  outline: none !important;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+.btn-tag-menu:hover {
+  background-color: var(--color-accent);
+  color: var(--color-primary);
+  border-color: var(--color-accent);
+}
+.btn-tag-menu:hover, .btn-tag-menu:focus, .btn-tag-menu:active {
+  outline: none !important;
+}
+
+.bg-dark .btn-tag-dark {
+  background-color: var(--color-dark);
+  color: var(--color-light);
+  border-color: var(--color-light);
+  outline: none !important;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+.bg-dark .btn-tag-dark:hover {
+  background-color: var(--color-accent);
+  color: var(--color-primary);
+  border-color: var(--color-accent);
+}
+.bg-dark .btn-tag-dark:hover, .bg-dark .btn-tag-dark:focus, .bg-dark .btn-tag-dark:active {
+  outline: none !important;
+}
+.bg-dark .btn-tag-primary {
+  background-color: var(--color-primary);
+  color: var(--color-secondary);
+  border-color: var(--color-primary);
+  outline: none !important;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+.bg-dark .btn-tag-primary:hover {
+  background-color: var(--color-accent);
+  color: var(--color-primary);
+  border-color: var(--color-accent);
+}
+.bg-dark .btn-tag-primary:hover, .bg-dark .btn-tag-primary:focus, .bg-dark .btn-tag-primary:active {
+  outline: none !important;
+}
+.bg-dark .btn-tag-secondary {
+  background-color: var(--color-secondary);
+  color: var(--color-primary);
+  border-color: var(--color-secondary);
+  outline: none !important;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+.bg-dark .btn-tag-secondary:hover {
+  background-color: var(--color-accent);
+  color: var(--color-primary);
+  border-color: var(--color-accent);
+}
+.bg-dark .btn-tag-secondary:hover, .bg-dark .btn-tag-secondary:focus, .bg-dark .btn-tag-secondary:active {
+  outline: none !important;
+}
+.bg-dark .btn-tag-accent {
+  background-color: var(--color-accent);
+  color: var(--color-primary);
+  border-color: var(--color-light);
+  outline: none !important;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+.bg-dark .btn-tag-accent:hover {
+  background-color: var(--color-primary);
+  color: var(--color-secondary);
+  border-color: var(--color-primary);
+}
+.bg-dark .btn-tag-accent:hover, .bg-dark .btn-tag-accent:focus, .bg-dark .btn-tag-accent:active {
+  outline: none !important;
+}
+.bg-dark .btn-tag-gray {
+  background-color: var(--color-gray);
+  color: var(--color-primary);
+  border-color: var(--color-light);
+  outline: none !important;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+.bg-dark .btn-tag-gray:hover {
+  background-color: var(--color-accent);
+  color: var(--color-primary);
+  border-color: var(--color-accent);
+}
+.bg-dark .btn-tag-gray:hover, .bg-dark .btn-tag-gray:focus, .bg-dark .btn-tag-gray:active {
+  outline: none !important;
+}
+.bg-dark .btn-tag-light {
+  background-color: var(--color-light);
+  color: var(--color-primary);
+  border-color: var(--color-light);
+  outline: none !important;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+.bg-dark .btn-tag-light:hover {
+  background-color: var(--color-accent);
+  color: var(--color-primary);
+  border-color: var(--color-accent);
+}
+.bg-dark .btn-tag-light:hover, .bg-dark .btn-tag-light:focus, .bg-dark .btn-tag-light:active {
+  outline: none !important;
+}
+.bg-dark .btn-tag-menu {
+  background-color: var(--color-primary);
+  color: var(--color-secondary);
+  border-color: var(--color-primary);
+  outline: none !important;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+.bg-dark .btn-tag-menu:hover {
+  background-color: var(--color-accent);
+  color: var(--color-primary);
+  border-color: var(--color-accent);
+}
+.bg-dark .btn-tag-menu:hover, .bg-dark .btn-tag-menu:focus, .bg-dark .btn-tag-menu:active {
+  outline: none !important;
+}
+
+.bg-primary .btn-tag-dark {
+  background-color: var(--color-dark);
+  color: var(--color-light);
+  border-color: var(--color-dark);
+  outline: none !important;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+.bg-primary .btn-tag-dark:hover {
+  background-color: var(--color-accent);
+  color: var(--color-primary);
+  border-color: var(--color-accent);
+}
+.bg-primary .btn-tag-dark:hover, .bg-primary .btn-tag-dark:focus, .bg-primary .btn-tag-dark:active {
+  outline: none !important;
+}
+.bg-primary .btn-tag-primary {
+  background-color: var(--color-primary);
+  color: var(--color-light);
+  border-color: var(--color-border-primary-light);
+  outline: none !important;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+.bg-primary .btn-tag-primary:hover {
+  background-color: var(--color-accent);
+  color: var(--color-primary);
+  border-color: var(--color-accent);
+}
+.bg-primary .btn-tag-primary:hover, .bg-primary .btn-tag-primary:focus, .bg-primary .btn-tag-primary:active {
+  outline: none !important;
+}
+.bg-primary .btn-tag-secondary {
+  background-color: var(--color-secondary);
+  color: var(--color-primary);
+  border-color: var(--color-secondary);
+  outline: none !important;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+.bg-primary .btn-tag-secondary:hover {
+  background-color: var(--color-accent);
+  color: var(--color-primary);
+  border-color: var(--color-accent);
+}
+.bg-primary .btn-tag-secondary:hover, .bg-primary .btn-tag-secondary:focus, .bg-primary .btn-tag-secondary:active {
+  outline: none !important;
+}
+.bg-primary .btn-tag-accent {
+  background-color: var(--color-accent);
+  color: var(--color-primary);
+  border-color: var(--color-accent);
+  outline: none !important;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+.bg-primary .btn-tag-accent:hover {
+  background-color: var(--color-primary);
+  color: var(--color-secondary);
+  border-color: var(--color-border-secondary);
+}
+.bg-primary .btn-tag-accent:hover, .bg-primary .btn-tag-accent:focus, .bg-primary .btn-tag-accent:active {
+  outline: none !important;
+}
+.bg-primary .btn-tag-gray {
+  background-color: var(--color-gray);
+  color: var(--color-primary);
+  border-color: var(--color-light);
+  outline: none !important;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+.bg-primary .btn-tag-gray:hover {
+  background-color: var(--color-accent);
+  color: var(--color-primary);
+  border-color: var(--color-accent);
+}
+.bg-primary .btn-tag-gray:hover, .bg-primary .btn-tag-gray:focus, .bg-primary .btn-tag-gray:active {
+  outline: none !important;
+}
+.bg-primary .btn-tag-light {
+  background-color: var(--color-light);
+  color: var(--color-primary);
+  border-color: var(--color-light);
+  outline: none !important;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+.bg-primary .btn-tag-light:hover {
+  background-color: var(--color-accent);
+  color: var(--color-primary);
+  border-color: var(--color-accent);
+}
+.bg-primary .btn-tag-light:hover, .bg-primary .btn-tag-light:focus, .bg-primary .btn-tag-light:active {
+  outline: none !important;
+}
+.bg-primary .btn-tag-menu {
+  background-color: var(--color-light);
+  color: var(--color-primary);
+  border-color: var(--color-light);
+  outline: none !important;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+.bg-primary .btn-tag-menu:hover {
+  background-color: var(--color-accent);
+  color: var(--color-primary);
+  border-color: var(--color-accent);
+}
+.bg-primary .btn-tag-menu:hover, .bg-primary .btn-tag-menu:focus, .bg-primary .btn-tag-menu:active {
+  outline: none !important;
+}
+
+.bg-secondary .btn-tag-dark {
+  background-color: var(--color-dark);
+  color: var(--color-light);
+  border-color: var(--color-light);
+  outline: none !important;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+.bg-secondary .btn-tag-dark:hover {
+  background-color: var(--color-accent);
+  color: var(--color-primary);
+  border-color: var(--color-accent);
+}
+.bg-secondary .btn-tag-dark:hover, .bg-secondary .btn-tag-dark:focus, .bg-secondary .btn-tag-dark:active {
+  outline: none !important;
+}
+.bg-secondary .btn-tag-primary {
+  background-color: var(--color-primary);
+  color: var(--color-secondary);
+  border-color: var(--color-secondary);
+  outline: none !important;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+.bg-secondary .btn-tag-primary:hover {
+  background-color: var(--color-accent);
+  color: var(--color-primary);
+  border-color: var(--color-accent);
+}
+.bg-secondary .btn-tag-primary:hover, .bg-secondary .btn-tag-primary:focus, .bg-secondary .btn-tag-primary:active {
+  outline: none !important;
+}
+.bg-secondary .btn-tag-secondary {
+  background-color: var(--color-secondary);
+  color: var(--color-primary);
+  border-color: var(--color-primary);
+  outline: none !important;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+.bg-secondary .btn-tag-secondary:hover {
+  background-color: var(--color-accent);
+  color: var(--color-primary);
+  border-color: var(--color-accent);
+}
+.bg-secondary .btn-tag-secondary:hover, .bg-secondary .btn-tag-secondary:focus, .bg-secondary .btn-tag-secondary:active {
+  outline: none !important;
+}
+.bg-secondary .btn-tag-accent {
+  background-color: var(--color-accent);
+  color: var(--color-primary);
+  border-color: var(--color-accent);
+  outline: none !important;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+.bg-secondary .btn-tag-accent:hover {
+  background-color: var(--color-primary);
+  color: var(--color-secondary);
+  border-color: var(--color-border-secondary);
+}
+.bg-secondary .btn-tag-accent:hover, .bg-secondary .btn-tag-accent:focus, .bg-secondary .btn-tag-accent:active {
+  outline: none !important;
+}
+.bg-secondary .btn-tag-gray {
+  background-color: var(--color-gray);
+  color: var(--color-primary);
+  border-color: var(--color-light);
+  outline: none !important;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+.bg-secondary .btn-tag-gray:hover {
+  background-color: var(--color-accent);
+  color: var(--color-primary);
+  border-color: var(--color-accent);
+}
+.bg-secondary .btn-tag-gray:hover, .bg-secondary .btn-tag-gray:focus, .bg-secondary .btn-tag-gray:active {
+  outline: none !important;
+}
+.bg-secondary .btn-tag-light {
+  background-color: var(--color-light);
+  color: var(--color-primary);
+  border-color: var(--color-light);
+  outline: none !important;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+.bg-secondary .btn-tag-light:hover {
+  background-color: var(--color-accent);
+  color: var(--color-primary);
+  border-color: var(--color-accent);
+}
+.bg-secondary .btn-tag-light:hover, .bg-secondary .btn-tag-light:focus, .bg-secondary .btn-tag-light:active {
+  outline: none !important;
+}
+.bg-secondary .btn-tag-menu {
+  background-color: var(--color-primary);
+  color: var(--color-secondary);
+  border-color: var(--color-light);
+  outline: none !important;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+.bg-secondary .btn-tag-menu:hover {
+  background-color: var(--color-light);
+  color: var(--color-primary);
+  border-color: var(--color-light);
+}
+.bg-secondary .btn-tag-menu:hover, .bg-secondary .btn-tag-menu:focus, .bg-secondary .btn-tag-menu:active {
+  outline: none !important;
+}
+
+.bg-accent .btn-tag-dark {
+  background-color: var(--color-dark);
+  color: var(--color-light);
+  border-color: var(--color-light);
+  outline: none !important;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+.bg-accent .btn-tag-dark:hover {
+  background-color: var(--color-accent);
+  color: var(--color-primary);
+  border-color: var(--color-border-dark);
+}
+.bg-accent .btn-tag-dark:hover, .bg-accent .btn-tag-dark:focus, .bg-accent .btn-tag-dark:active {
+  outline: none !important;
+}
+.bg-accent .btn-tag-primary {
+  background-color: var(--color-primary);
+  color: var(--color-secondary);
+  border-color: var(--color-secondary);
+  outline: none !important;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+.bg-accent .btn-tag-primary:hover {
+  background-color: var(--color-accent);
+  color: var(--color-primary);
+  border-color: var(--color-border-primary);
+}
+.bg-accent .btn-tag-primary:hover, .bg-accent .btn-tag-primary:focus, .bg-accent .btn-tag-primary:active {
+  outline: none !important;
+}
+.bg-accent .btn-tag-secondary {
+  background-color: var(--color-secondary);
+  color: var(--color-primary);
+  border-color: var(--color-secondary);
+  outline: none !important;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+.bg-accent .btn-tag-secondary:hover {
+  background-color: var(--color-accent);
+  color: var(--color-primary);
+  border-color: var(--color-border-primary);
+}
+.bg-accent .btn-tag-secondary:hover, .bg-accent .btn-tag-secondary:focus, .bg-accent .btn-tag-secondary:active {
+  outline: none !important;
+}
+.bg-accent .btn-tag-accent {
+  background-color: var(--color-accent);
+  color: var(--color-primary);
+  border-color: var(--color-primary);
+  outline: none !important;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+.bg-accent .btn-tag-accent:hover {
+  background-color: var(--color-primary);
+  color: var(--color-secondary);
+  border-color: var(--color-border-secondary);
+}
+.bg-accent .btn-tag-accent:hover, .bg-accent .btn-tag-accent:focus, .bg-accent .btn-tag-accent:active {
+  outline: none !important;
+}
+.bg-accent .btn-tag-gray {
+  background-color: var(--color-gray);
+  color: var(--color-primary);
+  border-color: var(--color-light);
+  outline: none !important;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+.bg-accent .btn-tag-gray:hover {
+  background-color: var(--color-accent);
+  color: var(--color-primary);
+  border-color: var(--color-border-secondary);
+}
+.bg-accent .btn-tag-gray:hover, .bg-accent .btn-tag-gray:focus, .bg-accent .btn-tag-gray:active {
+  outline: none !important;
+}
+.bg-accent .btn-tag-light {
+  background-color: var(--color-light);
+  color: var(--color-primary);
+  border-color: var(--color-light);
+  outline: none !important;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+.bg-accent .btn-tag-light:hover {
+  background-color: var(--color-accent);
+  color: var(--color-primary);
+  border-color: var(--color-border-secondary);
+}
+.bg-accent .btn-tag-light:hover, .bg-accent .btn-tag-light:focus, .bg-accent .btn-tag-light:active {
+  outline: none !important;
+}
+.bg-accent .btn-tag-menu {
+  background-color: var(--color-primary);
+  color: var(--color-secondary);
+  border-color: var(--color-light);
+  outline: none !important;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+.bg-accent .btn-tag-menu:hover {
+  background-color: var(--color-secondary);
+  color: var(--color-primary);
+  border-color: var(--color-secondary);
+}
+.bg-accent .btn-tag-menu:hover, .bg-accent .btn-tag-menu:focus, .bg-accent .btn-tag-menu:active {
+  outline: none !important;
+}
+
+.bg-gray .btn-tag-dark {
+  background-color: var(--color-dark);
+  color: var(--color-light);
+  border-color: var(--color-light);
+  outline: none !important;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+.bg-gray .btn-tag-dark:hover {
+  background-color: var(--color-accent);
+  color: var(--color-primary);
+  border-color: var(--color-border-dark);
+}
+.bg-gray .btn-tag-dark:hover, .bg-gray .btn-tag-dark:focus, .bg-gray .btn-tag-dark:active {
+  outline: none !important;
+}
+.bg-gray .btn-tag-primary {
+  background-color: var(--color-primary);
+  color: var(--color-secondary);
+  border-color: var(--color-secondary);
+  outline: none !important;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+.bg-gray .btn-tag-primary:hover {
+  background-color: var(--color-accent);
+  color: var(--color-primary);
+  border-color: var(--color-border-primary);
+}
+.bg-gray .btn-tag-primary:hover, .bg-gray .btn-tag-primary:focus, .bg-gray .btn-tag-primary:active {
+  outline: none !important;
+}
+.bg-gray .btn-tag-secondary {
+  background-color: var(--color-secondary);
+  color: var(--color-primary);
+  border-color: var(--color-secondary);
+  outline: none !important;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+.bg-gray .btn-tag-secondary:hover {
+  background-color: var(--color-accent);
+  color: var(--color-primary);
+  border-color: var(--color-border-primary);
+}
+.bg-gray .btn-tag-secondary:hover, .bg-gray .btn-tag-secondary:focus, .bg-gray .btn-tag-secondary:active {
+  outline: none !important;
+}
+.bg-gray .btn-tag-accent {
+  background-color: var(--color-accent);
+  color: var(--color-primary);
+  border-color: var(--color-primary);
+  outline: none !important;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+.bg-gray .btn-tag-accent:hover {
+  background-color: var(--color-primary);
+  color: var(--color-secondary);
+  border-color: var(--color-border-secondary);
+}
+.bg-gray .btn-tag-accent:hover, .bg-gray .btn-tag-accent:focus, .bg-gray .btn-tag-accent:active {
+  outline: none !important;
+}
+.bg-gray .btn-tag-gray {
+  background-color: var(--color-gray);
+  color: var(--color-primary);
+  border-color: var(--color-primary);
+  outline: none !important;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+.bg-gray .btn-tag-gray:hover {
+  background-color: var(--color-accent);
+  color: var(--color-primary);
+  border-color: var(--color-border-secondary);
+}
+.bg-gray .btn-tag-gray:hover, .bg-gray .btn-tag-gray:focus, .bg-gray .btn-tag-gray:active {
+  outline: none !important;
+}
+.bg-gray .btn-tag-light {
+  background-color: var(--color-light);
+  color: var(--color-primary);
+  border-color: var(--color-primary);
+  outline: none !important;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+.bg-gray .btn-tag-light:hover {
+  background-color: var(--color-accent);
+  color: var(--color-primary);
+  border-color: var(--color-border-secondary);
+}
+.bg-gray .btn-tag-light:hover, .bg-gray .btn-tag-light:focus, .bg-gray .btn-tag-light:active {
+  outline: none !important;
+}
+.bg-gray .btn-tag-menu {
+  background-color: var(--color-primary);
+  color: var(--color-light);
+  border-color: var(--color-dark);
+  outline: none !important;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+.bg-gray .btn-tag-menu:hover {
+  background-color: var(--color-light);
+  color: var(--color-dark);
+  border-color: var(--color-border-dark);
+}
+.bg-gray .btn-tag-menu:hover, .bg-gray .btn-tag-menu:focus, .bg-gray .btn-tag-menu:active {
+  outline: none !important;
+}
+
+.bg-light .btn-tag-dark {
+  background-color: var(--color-dark);
+  color: var(--color-light);
+  border-color: var(--color-dark);
+  outline: none !important;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+.bg-light .btn-tag-dark:hover {
+  background-color: var(--color-accent);
+  color: var(--color-primary);
+  border-color: var(--color-accent);
+}
+.bg-light .btn-tag-dark:hover, .bg-light .btn-tag-dark:focus, .bg-light .btn-tag-dark:active {
+  outline: none !important;
+}
+.bg-light .btn-tag-primary {
+  background-color: var(--color-primary);
+  color: var(--color-accent);
+  border-color: var(--color-primary);
+  outline: none !important;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+.bg-light .btn-tag-primary:hover {
+  background-color: var(--color-accent);
+  color: var(--color-primary);
+  border-color: var(--color-accent);
+}
+.bg-light .btn-tag-primary:hover, .bg-light .btn-tag-primary:focus, .bg-light .btn-tag-primary:active {
+  outline: none !important;
+}
+.bg-light .btn-tag-secondary {
+  background-color: var(--color-secondary);
+  color: var(--color-primary);
+  border-color: var(--color-secondary);
+  outline: none !important;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+.bg-light .btn-tag-secondary:hover {
+  background-color: var(--color-accent);
+  color: var(--color-primary);
+  border-color: var(--color-accent);
+}
+.bg-light .btn-tag-secondary:hover, .bg-light .btn-tag-secondary:focus, .bg-light .btn-tag-secondary:active {
+  outline: none !important;
+}
+.bg-light .btn-tag-accent {
+  background-color: var(--color-accent);
+  color: var(--color-primary);
+  border-color: var(--color-accent);
+  outline: none !important;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+.bg-light .btn-tag-accent:hover {
+  background-color: var(--color-primary);
+  color: var(--color-secondary);
+  border-color: var(--color-primary);
+}
+.bg-light .btn-tag-accent:hover, .bg-light .btn-tag-accent:focus, .bg-light .btn-tag-accent:active {
+  outline: none !important;
+}
+.bg-light .btn-tag-gray {
+  background-color: var(--color-gray);
+  color: var(--color-primary);
+  border-color: var(--color-gray);
+  outline: none !important;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+.bg-light .btn-tag-gray:hover {
+  background-color: var(--color-accent);
+  color: var(--color-primary);
+  border-color: var(--color-accent);
+}
+.bg-light .btn-tag-gray:hover, .bg-light .btn-tag-gray:focus, .bg-light .btn-tag-gray:active {
+  outline: none !important;
+}
+.bg-light .btn-tag-light {
+  background-color: var(--color-light);
+  color: var(--color-primary);
+  border-color: var(--color-border-light);
+  outline: none !important;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+.bg-light .btn-tag-light:hover {
+  background-color: var(--color-accent);
+  color: var(--color-primary);
+  border-color: var(--color-accent);
+}
+.bg-light .btn-tag-light:hover, .bg-light .btn-tag-light:focus, .bg-light .btn-tag-light:active {
+  outline: none !important;
+}
+.bg-light .btn-tag-menu {
+  background-color: var(--color-primary);
+  color: var(--color-light);
+  border-color: var(--color-light);
+  outline: none !important;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+.bg-light .btn-tag-menu:hover {
+  background-color: var(--color-accent);
+  color: var(--color-primary);
+  border-color: var(--color-accent);
+}
+.bg-light .btn-tag-menu:hover, .bg-light .btn-tag-menu:focus, .bg-light .btn-tag-menu:active {
+  outline: none !important;
+}
+
+.bg-dark {
+  background-color: var(--color-dark);
+  color: var(--color-default);
+}
+
+.bg-primary {
+  background-color: var(--color-primary);
+  color: var(--color-light);
+}
+
+.bg-secondary {
+  background-color: var(--color-secondary);
+  color: var(--color-primary);
+}
+
+.bg-accent {
+  background-color: var(--color-accent);
+  color: var(--color-primary);
+}
+
+.bg-gray {
+  background-color: var(--color-gray);
+  color: var(--color-default);
+}
+
+.bg-light {
+  background-color: var(--color-light);
+  color: var(--color-default);
+}
+
+div {
+  color: var(--color-primary);
+}
+
+p {
+  color: var(--color-primary);
+}
+
+span {
+  color: var(--color-secondary);
+}
+
+.bg-dark div {
+  color: var(--color-primary);
+}
+.bg-dark p {
+  color: var(--color-primary);
+}
+.bg-dark span {
+  color: var(--color-secondary);
+}
+
+.bg-primary div {
+  color: var(--color-light);
+}
+.bg-primary p {
+  color: var(--color-light);
+}
+.bg-primary span {
+  color: var(--color-secondary);
+}
+
+.bg-secondary div {
+  color: var(--color-light);
+}
+.bg-secondary p {
+  color: var(--color-light);
+}
+.bg-secondary span {
+  color: var(--color-primary);
+}
+
+.bg-accent div {
+  color: var(--color-primary);
+}
+.bg-accent p {
+  color: var(--color-primary);
+}
+.bg-accent span {
+  color: var(--color-secondary);
+}
+
+.bg-gray div {
+  color: var(--color-primary);
+}
+.bg-gray p {
+  color: var(--color-primary);
+}
+.bg-gray span {
+  color: var(--color-secondary);
+}
+
+.bg-light div {
+  color: var(--color-primary);
+}
+.bg-light p {
+  color: var(--color-primary);
+}
+.bg-light span {
+  color: var(--color-secondary);
+}

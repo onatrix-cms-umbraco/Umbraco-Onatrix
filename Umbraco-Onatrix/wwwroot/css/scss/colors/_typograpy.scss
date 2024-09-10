@@ -1,0 +1,48 @@
+@include typograpy-colors(
+  --color-primary,
+  --color-primary,
+  --color-secondary,
+);
+
+@include theme-typograpy(
+  'dark',
+  --color-primary,
+  --color-primary,
+  --color-secondary,
+);
+
+@include theme-typograpy(
+  'primary',
+  --color-light,
+  --color-light,
+  --color-secondary,
+);
+
+@include theme-typograpy(
+  'secondary',
+  --color-light,
+  --color-light,
+  --color-primary,
+);
+
+@include theme-typograpy(
+  'accent',
+  --color-primary,
+  --color-primary,
+  --color-secondary,
+);
+
+@include theme-typograpy(
+  'gray',
+  --color-primary,
+  --color-primary,
+  --color-secondary,
+);
+
+@include theme-typograpy(
+  'light',
+  --color-primary,
+  --color-primary,
+  --color-secondary,
+);
+
