@@ -1,0 +1,37 @@
+﻿@using Umbraco.Cms.Web.Common.PublishedModels;
+@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage
+
+@{
+
+
+  var backgroundImage = Model?.Value<IPublishedContent>("heroBackgroundImage")?.Url() ?? "";
+  var signatureImage = Model?.Value<IPublishedContent>("aboutSignatureImage")?.Url() ?? "";
+}
+
+<section id="about-us">
+  <div class="container">
+    <div class="section-title">
+      <h6>@Model?.Value("aboutSectionTitle")</h6>
+      <h2>@Model?.Value("aboutHeadline")</h2>
+    </div>
+    <blockquote>@Model?.Value("aboutQoute")</blockquote>
+    <p class="small">@Model?.Value("aboutText")</p>
+    <img src="@signatureImage" alt="">
+    <p>@Model?.Value("aboutSignature")</p>
+
+      <form class="card-form">
+        <div class="bg-primary">
+          <h3>Request a call back</h3>
+        </div>
+        <p>Dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur excepteur sint occaecat</p>
+        <input type="text" placeholder="Name">
+        <input type="text" placeholder="Email address">
+        <input type="text" placeholder="Phone">
+        <select id="form-select" name="businesses-type">
+          <option value="option">--select option--</option>
+          <option value="Financial-consulting">Financial consulting</option>
+        </select>
+        <a href="" class="btn-accent">Submit</a>
+      </form>
+  </div>
+</section>

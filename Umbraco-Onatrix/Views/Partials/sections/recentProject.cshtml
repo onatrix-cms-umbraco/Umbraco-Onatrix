@@ -1,0 +1,34 @@
+﻿@using Umbraco.Cms.Web.Common.PublishedModels;
+@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage
+@{
+	var selection = Umbraco.Content(Guid.Parse("305bdcf0-0a52-4df2-8971-9bfabfc6e746"))
+    .ChildrenOfType("projectItemTemplate")
+    .Where(x => x.IsVisible());
+}
+
+<section id="recent-project">
+  <div class="container">
+    <div class="section-title">
+      <h6>OUR PROJECTS</h6>
+      <h2>Recent projects</h2>
+    </div>
+  </div>
+   <div class="projects-container">
+@foreach (var item in selection)
+{
+    var image = item.Value<IPublishedContent>("thumbnailImage").Url() ?? "";
+    var serviceType = item.Value<string>("serviceType") ?? "";
+
+    <div class="project">
+      <div class="image">
+        <img src="@image" alt="">
+        <div class="banner bg-primary">
+          <h6>@item.Name</h6>
+          <p>@serviceType</p>
+        </div>
+      </div>
+    </div>
+}
+  </div>
+</section>
+

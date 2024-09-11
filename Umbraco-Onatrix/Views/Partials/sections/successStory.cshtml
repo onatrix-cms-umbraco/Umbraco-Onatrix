@@ -1,0 +1,30 @@
+﻿@using Umbraco.Cms.Web.Common.PublishedModels;
+@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage
+@{
+  var backgroundImage = Model?.Value<IPublishedContent>("successStoryBackgroundImage")?.Url() ?? "";
+}
+
+
+<section id="success-story" class="bg-primary">
+    <div class="container">
+        <div class="section-title">
+        <h6>@Model.Value("successStorySectionTitle")</h6>
+        <h2>@Model.Value("successStoryHeadline")</h2>
+        </div>
+        <div class="stories-parent">
+        <div class="stories-child">
+            <h1><span>@Model.Value("successStoryCustomerNumber")</span></h1>
+            <h5>@Model.Value("successStoryCustomerText")</h5>
+        </div>
+        <div class="stories-child">
+            <h1><span>@Model.Value("successStoryProjectsNumber")</span></h1>
+            <h5>@Model.Value("successStoryProjectsText")</h5>
+        </div>
+        <div class="stories-child">
+            <h1><span>@Model.Value("successStoryBranchesNumber")</span></h1>
+            <h5>@Model.Value("successStoryBranchesText")</h5>
+        </div>
+        </div>
+        <img src="@backgroundImage" alt="">
+    </div>
+</section>

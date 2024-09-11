@@ -19,22 +19,30 @@
   }
 }
 
-#header-nav{
-  padding: 4rem;
-  h2{
-    text-align: center;
-    margin: 0;
-  }
-  nav{
-    display: flex;
-    justify-content: center;
-    padding: 2rem;
-    gap: .5rem;
-    h6{
-      @include text;
-      margin: 0;
-      padding: 0;
-      color: #4F5955;
+#header-nav {
+    padding: 4rem;
+
+    h2 {
+        text-align: center;
+        margin: 0;
     }
-  }
+
+    nav {
+        display: flex;
+        justify-content: center;
+        padding: 2rem;
+        gap: .5rem;
+
+        a {
+            color: #4F5955;
+        }
+
+        .active {
+            @include text;
+            margin: 0;
+            padding: 0;
+            color: #D9C3A9;
+            cursor: pointer;
+        }
+    }
 }

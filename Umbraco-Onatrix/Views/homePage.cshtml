@@ -8,168 +8,20 @@
   var signatureImage = Model?.Value<IPublishedContent>("aboutSignatureImage")?.Url() ?? "";
 }
 
-        <section id="hero-section">
-          <img src="@backgroundImage" alt="">
-          <div class="container hero">
-            <h1>@Model?.Value("heroHeadline")</h1>
-            <p>@Model?.Value("heroText")</p>
-            <a href="@Model?.Value("heroButtonLinkUrl")" class="btn-primary">@Model?.Value("heroButtonText")</a>
-          </div>
-        </section>
-        <section id="about-us">
-          <div class="container">
-            <div class="section-title">
-              <h6>@Model?.Value("aboutSectionTitle")</h6>
-              <h2>@Model?.Value("aboutHeadline")</h2>
-            </div>
-            <blockquote>@Model?.Value("aboutQoute")</blockquote>
-            <p class="small">@Model?.Value("aboutText")</p>
-            <img src="@signatureImage" alt="">
-            <p>@Model?.Value("aboutSignature")</p>
+@await Html.PartialAsync("partials/sections/hero.cshtml")
 
-              <form class="card-form">
-                <div class="bg-primary">
-                  <h3>Request a call back</h3>
-                </div>
-                <p>Dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur excepteur sint occaecat</p>
-                <input type="text" placeholder="Name">
-                <input type="text" placeholder="Email address">
-                <input type="text" placeholder="Phone">
-                <select id="form-select" name="businesses-type">
-                  <option value="option">--select option--</option>
-                  <option value="Financial-consulting">Financial consulting</option>
-                </select>
-                <a href="" class="btn-accent">Submit</a>
-              </form>
-          </div>
-        </section>
-        <section id="our-services" class="bg-gray">
-          <div class="container">
-            <div class="container section-title">
-              <h6>OUR SERVICES</h6>
-              <h2>We Provide The Solutions To Grow Your Business Faster</h2>
-            </div>
-            <div class="cards">
-                <a class="card">
-                  <h5 class="bg-light">Lorem ipsum</h5>
-                  <img src="images/people/image-21-min 1.png" alt="Beskrivning av bilden">
-                  <p class="bg-light">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis blanditiis officia eos autem beatae minima quos? </p>
-                </a>
-                <a class="card">
-                  <h5 class="bg-light">Lorem ipsum</h5>
-                  <img src="images/people/image-21-min 1.png" alt="Beskrivning av bilden">
-                  <p class="bg-light">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis blanditiis officia eos autem beatae minima quos? </p>
-                </a>
-                <a class="card">
-                  <h5 class="bg-light">Lorem ipsum</h5>
-                  <img src="images/people/image-21-min 1.png" alt="Beskrivning av bilden">
-                  <p class="bg-light">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis blanditiis officia eos autem beatae minima quos? </p>
-                </a>
-                <a class="card">
-                  <h5 class="bg-light">Lorem ipsum</h5>
-                  <img src="images/people/image-21-min 1.png" alt="Beskrivning av bilden">
-                  <p class="bg-light">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis blanditiis officia eos autem beatae minima quos? </p>
-                </a>
-                <a class="card">
-                  <h5 class="bg-light">Lorem ipsum</h5>
-                  <img src="images/people/image-21-min 1.png" alt="Beskrivning av bilden">
-                  <p class="bg-light">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis blanditiis officia eos autem beatae minima quos? </p>
-                </a>
-                <a class="card">
-                  <h5 class="bg-light">Lorem ipsum</h5>
-                  <img src="images/people/image-21-min 1.png" alt="Beskrivning av bilden">
-                  <p class="bg-light">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis blanditiis officia eos autem beatae minima quos? </p>
-                </a>
-              </div>
-            </div>
-        </section>
-        <section id="our-story" class="bg-light">
-          <div class="container">
-            <div class="our-story-info">
-              <h2>We are trusted by more than <span>4.000+ clients</span></h2>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quis molestie nulla. Nam accumsanporttitor arcu,ac tincidunt lectus tincidunt sed.</p>
-              <a href=""class="btn-primary">Read our story</a>
-            </div>
-            <img src="images/people/Img-1 1.png" alt="">
-          </div>
-        </section>
-        <section id="success-story" class="bg-primary">
-            <div class="container">
-              <div class="section-title">
-                <h6>SUCCESS STORIES</h6>
-                <h2>Success story</h2>
-              </div>
-              <div class="stories-parent">
-                <div class="stories-child">
-                  <h1><span>689</span></h1>
-                  <h5>More than 100 customers has been served</h5>
-                </div>
-                <div class="stories-child">
-                  <h1><span>370</span></h1>
-                  <h5>More than 370 projects has been completed</h5>
-                </div>
-                <div class="stories-child">
-                  <h1><span>125</span></h1>
-                  <h5>More than 125 branches has been established in Europe and America</h5>
-                </div>
-              </div>
-              <img src="images/people/success-image.png" alt="">
-          </div>
-        </section>
-        <section id="recent-project">
-          <div class="container">
-            <div class="section-title">
-              <h6>OUR PROJECTS</h6>
-              <h2>Recent projects</h2>
-            </div>
-          </div>
-          <div class="projects-container">
-            <div class="project">
-              <div class="image">
-                <img src="/images/people/pj1.png" alt="">
-                <div class="banner bg-primary">
-                  <h6>Annual Report for Juva Inc.</h6>
-                  <p>Financial Services</p>
-                </div>
-              </div>
-            </div>
-            <div class="project">
-              <div class="image">
-                <img src="/images/people/pj1.png" alt="">
-                <div class="banner bg-primary">
-                  <h6>Annual Report for Juva Inc.</h6>
-                  <p>Financial Services</p>
-                </div>
-              </div>
-            </div>
-            <div class="project">
-              <div class="image">
-                <img src="/images/people/pj1.png" alt="">
-                <div class="banner bg-primary">
-                  <h6>Annual Report for Juva Inc.</h6>
-                  <p>Financial Services</p>
-                </div>
-              </div>
-            </div>
-            <div class="project">
-              <div class="image">
-                <img src="/images/people/pj1.png" alt="">
-                <div class="banner bg-primary">
-                  <h6>Annual Report for Juva Inc.</h6>
-                  <p>Financial Services</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-        <section id="partners">
-          <div class="container">
-            <img src="/images/illustration/partner.svg" alt="">
-            <img src="/images/illustration/partner.svg" alt="">
-            <img src="/images/illustration/partner.svg" alt="">
-            <img src="/images/illustration/partner.svg" alt="">
-            <img src="/images/illustration/partner.svg" alt="">
-            <img src="/images/illustration/partner.svg" alt="">
-          </div>
-        </section>
+@await Html.PartialAsync("partials/sections/aboutUs.cshtml")
+
+@await Html.PartialAsync("partials/sections/ourServices.cshtml")
+
+@await Html.PartialAsync("partials/sections/ourStory.cshtml")
+
+@await Html.PartialAsync("partials/sections/successStory.cshtml")
+
+@await Html.PartialAsync("partials/sections/recentProject.cshtml")
+
+@await Html.PartialAsync("partials/sections/partners.cshtml")
+
+
+
 

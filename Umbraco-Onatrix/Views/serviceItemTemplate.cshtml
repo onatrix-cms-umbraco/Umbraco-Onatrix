@@ -4,3 +4,31 @@
 	Layout = "mainLayout.cshtml";
 
 }
+@await Html.PartialAsync("partials/static/breadcrumb.cshtml")
+
+        <div class="container">
+          <div class="wrapper-aside-left">
+            <aside>
+              <div class="content">
+                <div class="about-us-card">
+                  <h4>About Us</h4>
+                  <img src="/images/people/group-project-image.png" alt="">
+                  <p>Dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non </p>
+                </div>
+                <div class="help-us-card bg-primary">
+                  <h3>How can we help you?</h3>
+                  <p>online support 24/7, we are here to help you</p>
+                  <form action="">
+                    <input type="email" placeholder="E-mail address">
+                  </form>
+                </div>
+              </div>
+              <div class="vl-line"></div>
+            </aside>
+            <section id="service-content">
+              <img src="/images/people/risk.png" alt="">
+              <ul class="keypoint">
+				@Model.Value("pageContent")
+              </ul>
+            </section>
+          </div>
