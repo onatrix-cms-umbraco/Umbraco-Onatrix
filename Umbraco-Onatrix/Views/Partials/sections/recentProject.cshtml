@@ -16,18 +16,20 @@
    <div class="projects-container">
 @foreach (var item in selection)
 {
-    var image = item.Value<IPublishedContent>("thumbnailImage").Url() ?? "";
+    var thumbnailImage = item.Value<IPublishedContent>("thumbnailImage");
+    var imageUrl = thumbnailImage != null ? thumbnailImage.GetCropUrl(480, 480) : "";
     var serviceType = item.Value<string>("serviceType") ?? "";
-
+    <a href="@item.Url()">
     <div class="project">
       <div class="image">
-        <img src="@image" alt="">
+       <img src="@imageUrl" alt="Project image" />
         <div class="banner bg-primary">
           <h6>@item.Name</h6>
           <p>@serviceType</p>
         </div>
       </div>
     </div>
+    </a>
 }
   </div>
 </section>
