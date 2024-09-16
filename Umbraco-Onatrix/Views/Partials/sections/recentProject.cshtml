@@ -1,16 +1,20 @@
 ﻿@using Umbraco.Cms.Web.Common.PublishedModels;
 @inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage
 @{
-	var selection = Umbraco.Content(Guid.Parse("305bdcf0-0a52-4df2-8971-9bfabfc6e746"))
-    .ChildrenOfType("projectItemTemplate")
-    .Where(x => x.IsVisible());
+    var selection = Umbraco.Content(Guid.Parse("305bdcf0-0a52-4df2-8971-9bfabfc6e746"))
+        .ChildrenOfType("projectItemTemplate")
+        .Where(x => x.IsVisible())
+        .OrderByDescending(x => x.Value<DateTime>("date"))
+        .Take(4); 
+
+
 }
 
 <section id="recent-project">
   <div class="container">
     <div class="section-title">
-      <h6>OUR PROJECTS</h6>
-      <h2>Recent projects</h2>
+      <h6>@Model.Value("recentProjectSectionTitle")</h6>
+      <h2>@Model.Value("recentProjectHeadline")</h2>
     </div>
   </div>
    <div class="projects-container">

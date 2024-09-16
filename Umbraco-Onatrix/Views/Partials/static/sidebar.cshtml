@@ -1,0 +1,64 @@
+﻿@using Umbraco.Cms.Core.Models
+@using Umbraco.Cms.Web.Common.PublishedModels;
+@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage
+@inject Umbraco.Cms.Web.Common.UmbracoHelper UmbracoHelper
+@{       
+      var selection = Umbraco.Content(Guid.Parse("305bdcf0-0a52-4df2-8971-9bfabfc6e746"))?
+        .ChildrenOfType("projectItemTemplate")?
+        .Where(x => x.IsVisible())
+        .OrderByDescending(x => x.Value<DateTime>("date")).Take(4);
+          
+        var tags = Model.Value<IEnumerable<string>>("tags");
+        var rootContents = UmbracoHelper.ContentAtRoot();
+        var settings = rootContents.FirstOrDefault(x => x.ContentType.Alias == "settingsPage") ?? null;
+        var sidebarTags = settings?.Value<IEnumerable<string>>("sideBarTags");
+
+        var date = Model.Value<DateTime?>("date"); 
+        var formattedDate = date.HasValue ? date.Value.ToString("MMMM dd, yyyy") : "No date available";
+
+}
+
+<aside>
+  <div class="vl-line"></div>
+  <div class="content">
+    <div id="recent-project">
+      <h4>Recent projects</h4>
+        @if (selection != null)
+        {
+            @foreach (var item in selection)
+            {
+                var image = item.Value<IPublishedContent>("thumbnailImage");
+                var imageUrl = image != null ? image.GetCropUrl(width: 130, height: 83, imageCropMode: ImageCropMode.Crop, imageCropAnchor: ImageCropAnchor.Center) : "";
+              <a href="@item.Url()">
+                <div class="project-content-recent">
+                    <img src="@imageUrl" alt="">
+                    <div class="text-container">
+                        <h5>@item.Name</h5>
+                        <div class="date-container">
+                            <i class="fa-light fa-calendar-days"></i>
+                            <p>@formattedDate</p>
+                        </div>
+                    </div>
+                </div>
+              </a>
+            }
+        }
+        else {<p>Unable to load projects</p>}
+</div>   
+    <div class="tags">
+      <h4>Tags</h4>
+            @foreach (var tagSide in sidebarTags)
+                {
+
+                <a href="" class="btn-tag-light">@tagSide</a>
+                }
+    </div>
+    <div class="help-us-card bg-primary">
+      <h3>How can we help you?</h3>
+      <p>online support 24/7, we are here to help you</p>
+      <form action="">
+        <input type="email" placeholder="E-mail address">
+      </form>
+    </div>
+  </div>
+</aside>
