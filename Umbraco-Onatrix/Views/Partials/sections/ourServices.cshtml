@@ -1,8 +1,8 @@
 ﻿@using Umbraco.Cms.Web.Common.PublishedModels;
 @inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage
 @{
-    var selection = Umbraco.Content(Guid.Parse("a80c8b14-af45-408b-861a-ed1c94b35ad7"))
-        .ChildrenOfType("serviceItemTemplate")
+    var selection = Umbraco.Content(Guid.Parse("a80c8b14-af45-408b-861a-ed1c94b35ad7"))?
+        .ChildrenOfType("serviceItemTemplate")?
         .Where(x => x.IsVisible());
 
     
@@ -12,18 +12,18 @@
 <section id="our-services" class="@(isHomePage ? "bg-gray" : "bg-light")">
   <div class="container">
     <div class="container section-title">
-            @if (isHomePage)
-      {
-          <h6>@Model.Value("serviceSectionTitle")</h6>
-          <h2>@Model.Value("serviceHeadline")</h2>
-      }
-      <h2>@Model.Value("customHeadline")</h2>
+        @if (isHomePage)
+          {
+              <h6>@Model.Value("serviceSectionTitle")</h6>
+              <h2>@Model.Value("serviceHeadline")</h2>
+          }
+            <h2>@Model.Value("customHeadline")</h2>
 
     </div>
     <div class="cards">
-        @foreach (var item in selection)
+        @foreach (var item in selection!)
         {
-            var image = item.Value<IPublishedContent>("thumbnailImage").Url() ?? "";
+            var image = item.Value<IPublishedContent>("thumbnailImage")?.Url() ?? "";
             var preamble = item.Value<string>("preamble") ?? "";
 
             <a href="@item.Url()" class="card">
