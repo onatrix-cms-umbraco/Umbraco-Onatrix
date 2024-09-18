@@ -1,0 +1,29 @@
+﻿@using Umbraco.Cms.Web.Common.PublishedModels;
+@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage
+
+@{
+
+    var rating = Model.Value<int>("reviewRating");
+    var reviewImage = Model?.Value<IPublishedContent>("reviewImage")?.Url() ?? "";
+
+}
+
+<section id="about-our-services" class="bg-gray">
+    <img src="@reviewImage" alt="">
+    <div class="container">
+    <div class="section-title">
+        <h6>@Model.Value("reviewSectionTitle")</h6>
+        <h2>@Model.Value("reviewHeadline")</h2>
+    </div>
+    <p>@Model.Value("reviewComment")</p>
+    @for(var i = 0; i < rating; i++)
+    {
+        <i class="fa-solid fa-star"></i>
+    }
+    
+    <div class="text-container">
+        <p>@Model.Value("reviewCustomer")</p>
+        <h4>@Model.Value("reviewCompany")</h4>
+    </div>
+    </div>
+</section>

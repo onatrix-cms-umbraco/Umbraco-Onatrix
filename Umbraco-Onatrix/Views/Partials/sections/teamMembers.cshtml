@@ -1,0 +1,50 @@
+﻿@using Umbraco.Cms.Web.Common.PublishedModels;
+@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage
+@{
+    var selection = Umbraco.Content(Guid.Parse("9c5b46cc-32e6-4662-9f3b-8d4493ca67d3"))
+    .ChildrenOfType("teamMemberItemTemplate")
+    .Where(x => x.IsVisible())
+    .Take(7)
+    .ToList();
+}
+
+<section id="our-experts" class="bg-light">
+    <div class="container">
+        <div class="container section-title">
+            <h6>OUR EXPERT</h6>
+            <h2>A team of professionals with years of experience</h2>
+        </div>
+
+        <div class="card-expert">
+            @for (var i = 0; i < 3; i++)
+            {
+                var item = selection[i];
+                var image = item.Value<IPublishedContent>("teamMemberImage").Url() ?? "";
+                var position = item.Value<string>("teamMemberPosition") ?? "";
+                var company = item.Value<string>("teamMemberCompany") ?? "";
+
+                <div class="card">
+                    <img src="@image" alt="">
+                    <h5>@item.Name</h5>
+                    <p>@position at @company</p>
+                </div>
+            }
+        </div>
+
+        <div class="card-expert-small">
+            @for (var i = 3; i < selection.Count; i++)
+            {
+                var item = selection[i];
+                var image = item.Value<IPublishedContent>("teamMemberImage").Url() ?? "";
+                var position = item.Value<string>("teamMemberPosition") ?? "";
+                var company = item.Value<string>("teamMemberCompany") ?? "";
+
+                <div class="card-small">
+                    <img src="@image" alt="">
+                    <h5>@item.Name</h5>
+                    <p>@position at @company</p>
+                </div>
+            }
+        </div>
+    </div>
+</section>

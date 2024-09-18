@@ -36,7 +36,7 @@
                     height: 20%;
                     padding: 2rem;
                     background-color: rgba(71, 71, 71, 0.8);
-                    color: white;
+                    color: var(--color-light);
                     transition: height 0.3s ease-in-out, background-color 0.3s ease-in-out;
 
                     h6 {
@@ -52,7 +52,7 @@
 
                 &:hover .banner {
                     height: 30%;
-                    background-color: #4F5955;
+                    background-color: var(--color-primary);
                 }
             }
         }

@@ -3,10 +3,13 @@
     display: grid;
     padding-bottom: 3rem;
     .card-form{
-      background-color: #FFFFFF;
+      background-color: var(--color-light);
       position: absolute;
       bottom: 0;
       right: 0;
+    }
+    blockquote{
+        width: 50%;
     }
   }
 

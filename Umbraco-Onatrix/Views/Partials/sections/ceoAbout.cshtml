@@ -1,0 +1,23 @@
+﻿@using Umbraco.Cms.Web.Common.PublishedModels;
+@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage
+
+@{
+
+
+  var ceoImage = Model?.Value<IPublishedContent>("aboutUsCeoImage")?.Url() ?? "";
+
+
+}
+
+<section id="ceo">
+  <div class="container">
+    <div class="img-container">
+      <img src="@ceoImage" alt="image of the ceo">
+      <p>@Model.Value("aboutUsCeoName")</p>
+    </div>
+    <div class="text-container">
+      @Model.Value("aboutUsCeoText")
+    </div>
+  </div>
+
+</section>

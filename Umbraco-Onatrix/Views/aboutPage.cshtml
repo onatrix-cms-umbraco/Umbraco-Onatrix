@@ -3,3 +3,9 @@
 @{
 	Layout = "mainLayout.cshtml";
 }
+
+@await Html.PartialAsync("partials/sections/ceoAbout.cshtml")
+@await Html.PartialAsync("partials/sections/review.cshtml")
+@await Html.PartialAsync("partials/sections/teamMembers.cshtml")
+
+@await Html.PartialAsync("partials/static/nextProject.cshtml")
