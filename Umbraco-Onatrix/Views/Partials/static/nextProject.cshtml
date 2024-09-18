@@ -1,0 +1,59 @@
+﻿@using Umbraco.Cms.Core.Models
+@using Umbraco.Cms.Web.Common.PublishedModels;
+@using static Lucene.Net.Search.FieldValueHitQueue
+@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage
+@inject Umbraco.Cms.Web.Common.UmbracoHelper  UmbracoHelper
+@{
+    var rootContents = UmbracoHelper.ContentAtRoot();
+    var settings = rootContents.FirstOrDefault(x => x.ContentType.Alias == "settingsPage") ?? null;
+    var officeLocation = settings?.Value<string>("officeLocation") ?? "";
+    var phoneNumber = settings?.Value<string>("phoneNumber") ?? "";
+    var emailAddress = settings?.Value<string>("emailAddress") ?? "";
+    var frontImage = settings?.Value<IPublishedContent>("frontImage");
+    var imageVectorFirst = settings?.Value<IPublishedContent>("imageVectorFirst");
+    var imageVectorSecond = settings?.Value<IPublishedContent>("imageVectorSecond");
+    var nextProjectHeadline = settings?.Value<string>("nextProjectHeadline") ?? "";
+
+    var isContactPage = Umbraco.AssignedContentItem.ContentType.Alias == "contactPage";
+}
+
+<section id="contact-project" class="section-contact @(isContactPage ? "bg-light" : "bg-gray")">
+<div class="container">
+    <div class="image-container">
+
+        <div class="person">
+        <img src="@frontImage?.Url()" alt="">
+        </div>
+        <div class="square">
+        <img src="@imageVectorFirst?.Url()" alt="">
+        </div>
+        <div class="dots">
+        <img src="@imageVectorSecond?.Url()" alt="">
+        </div>
+    </div>
+<div class="text-container">
+    <h2>@nextProjectHeadline</h2>
+    <div class="contact-information">
+    <i class="fa-regular fa-location-dot"></i>
+    <div class="text-group">
+        <h6>@("Office location")</h6>
+        <p>@officeLocation</p>
+    </div>
+    </div>
+    <div class="contact-information">
+    <i class="fa-regular fa-phone-flip"></i>
+    <div class="text-group">
+        <h6>@("Phone number")</h6>
+        <p>@phoneNumber</p>
+    </div>
+    </div>
+    <div class="contact-information">
+    <i class="fa-regular fa-envelope"></i>
+    <div class="text-group">
+        <h6>@("E-mail Address")</h6>
+        <p>@emailAddress</p>
+    </div>
+    </div>
+</div>
+</div>
+</section>

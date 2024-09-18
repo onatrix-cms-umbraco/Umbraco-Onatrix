@@ -22,15 +22,16 @@
 @await Html.PartialAsync("partials/static/breadcrumb.cshtml")
 <div class="container">
   <div class="wrapper-aside-right">
-    <section id="project-content-detail">
-      <div class="date-container">
-        <i class="fa-light fa-calendar-days"></i>
-        <p>@formattedDate</p>
-      </div>
-      @Model.Value("pageContent")
-      
-        <div class="tags">
-          <h5>Tags:</h5>
+        <section id="project-content-detail">
+            <div class="vl-line">
+            <div class="date-container">
+                <i class="fa-light fa-calendar-days"></i>
+                <p>@formattedDate</p>
+            </div>
+            @Model.Value("pageContent")
+
+            <div class="tags">
+                <h5>Tags:</h5>
                 @if (tags != null)
                 {
                     @foreach (var tag in tags)
@@ -39,10 +40,15 @@
                         <a href="" class="btn-tag-accent">@tag</a>
                     }
                 }
-                else{<p>Unable to load tags...</p>}
-        </div>
-    </section>
-    @await Html.PartialAsync("partials/static/sidebar.cshtml")
-
+                else
+                {
+                    <p>Unable to load tags...</p>
+                }
+            </div>
+         </div>
+        </section>
+    <aside>
+        @await Html.PartialAsync("partials/static/sidebar.cshtml")
+    </aside>
   </div>
 </div>

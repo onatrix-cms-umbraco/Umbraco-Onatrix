@@ -33,38 +33,38 @@
   }
 }
 
-form{
-  input{
-    padding: 1rem;
-    margin: 1rem 0;
-    width: 100%;
-    border: 1px solid #EBEBEB;
-    border-radius: 2px;
-    font-family: "Poppins", sans-serif;
-    font-style: italic;
+form {
+    input {
+        padding: 1rem;
+        margin: 1rem 0;
+        border: 1px solid #EBEBEB;
+        border-radius: 2px;
+        font-family: "Poppins", sans-serif;
+        font-style: italic;
+    }
 
-  }
-  textarea{
-    padding: 1rem;
-    margin: 1rem 0;
-    width: 100%;
-    border: 1px solid #EBEBEB;
-    border-radius: 2px;
-    height: 200px;
-    font-family: "Poppins", sans-serif;
-    font-style: italic;
-    resize: none;
+    textarea {
+        padding: 1rem;
+        margin: 1rem 0;
+        width: 100%;
+        border: 1px solid #EBEBEB;
+        border-radius: 2px;
+        height: 200px;
+        font-family: "Poppins", sans-serif;
+        font-style: italic;
+        resize: none;
+    }
 
-  }
-  select{
-    padding: 1rem;
-    margin: 1rem 0;
-    width: 100%;
-    border: 1px solid #EBEBEB;
-    border-radius: 2px;
-    font-family: "Poppins", sans-serif;
-    resize: none;
-  }
+    select {
+        padding: 1rem;
+        margin: 1rem 0;
+        border: 1px solid #EBEBEB;
+        border-radius: 2px;
+        font-family: "Poppins", sans-serif;
+        resize: none;
+        appearance: none;
+        background: url() no-repeat 95% 50%;
+    }
 }
 
 .section-contact{
