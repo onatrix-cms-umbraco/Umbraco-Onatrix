@@ -1,10 +1,26 @@
-﻿<section id="partners">
+﻿@using Umbraco.Cms.Core.Models
+@using Umbraco.Cms.Web.Common.PublishedModels;
+@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage
+@inject Umbraco.Cms.Web.Common.UmbracoHelper UmbracoHelper
+
+@{
+        var rootContents = UmbracoHelper.ContentAtRoot();
+    var settings = rootContents.FirstOrDefault(x => x.ContentType.Alias == "settingsPage") ?? null;
+    var partnerMultiImage = settings?.Value<IEnumerable<MediaWithCrops>>("partnerImage");
+}
+
+<section id="partners">
     <div class="container">
-    <img src="/images/illustration/partner.svg" alt="">
-    <img src="/images/illustration/partner.svg" alt="">
-    <img src="/images/illustration/partner.svg" alt="">
-    <img src="/images/illustration/partner.svg" alt="">
-    <img src="/images/illustration/partner.svg" alt="">
-    <img src="/images/illustration/partner.svg" alt="">
+        @if (partnerMultiImage != null && partnerMultiImage.Any())
+        {
+            @foreach (var entry in partnerMultiImage)
+            {
+                <img src="@entry.Url()" alt="Partner Image" /> 
+            }
+        }
+        else
+        {
+            <p>No images found.</p> 
+        }
     </div>
 </section>

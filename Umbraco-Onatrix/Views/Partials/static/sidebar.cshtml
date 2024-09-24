@@ -14,7 +14,14 @@
         var sidebarTags = settings?.Value<IEnumerable<string>>("sideBarTags");
         var date = Model.Value<DateTime?>("date"); 
         var formattedDate = date.HasValue ? date.Value.ToString("MMMM dd, yyyy") : "No date available";
+        var aboutUsHeadline = settings?.Value<string>("AboutUsHeadline");
+
+        var aboutUsText = settings?.Value<string>("AboutUsText");
+        var abouUsImage = settings?.Value<IPublishedContent>("aboutUsImage");
+        
+        
         var isProjectItemTemplate = Umbraco.AssignedContentItem.ContentType.Alias == "projectItemTemplate";
+        var isProjectPage = Umbraco.AssignedContentItem.ContentType.Alias == "projectPage";
         var isServiceItemTemplate = Umbraco.AssignedContentItem.ContentType.Alias == "serviceItemTemplate";
 
 }
@@ -50,13 +57,13 @@
     </div>
 
         <div class="@(isServiceItemTemplate ? "about-us-card" : "d-none")">
-            <h4>About Us</h4>
-            <img src="/images/people/group-project-image.png" alt="">
-            <p>Dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non </p>
+            <h4>@aboutUsHeadline</h4>
+            <img src="@abouUsImage?.Url()" alt="">
+            <p>@aboutUsText</p>
         </div>
 
 
-        <div class="@(isProjectItemTemplate ? "tag-section tags" : "d-none")">
+        <div class="@(isProjectItemTemplate || isProjectPage  ? "tag-section tags" : "d-none")">
         <h4>Tags</h4>
         @foreach (var tagSide in sidebarTags!)
         {
@@ -64,7 +71,7 @@
         }
     </div>
 
-        <div class="@(isServiceItemTemplate || isProjectItemTemplate ? "help-us-card bg-primary" : "d-none")">
+        <div class="@(isServiceItemTemplate || isProjectItemTemplate || isProjectPage ? "help-us-card bg-primary" : "d-none")">
       <h3>How can we help you?</h3>
       <p>online support 24/7, we are here to help you</p>
       <form action="">

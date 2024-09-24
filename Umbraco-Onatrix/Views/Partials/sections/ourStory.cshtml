@@ -13,14 +13,14 @@
     <div class="container">
     <div class="our-story-info">
         <h2>
-            @Model.Value("ourStoryHeadline")
+            @Model?.Value("ourStoryHeadline")
         </h2>
         <h2>
-            <span data-target="@Model.Value("ourStoryClientNumbers")">0</span>
+            <span data-target="@Model?.Value("ourStoryClientNumbers")">0</span>
             <span>+ clients</span>
         </h2>
-        <p>@Model.Value("ourStoryText")</p>
-        <a href="@Model.Value("ourStoryBottonLinkUrl")"class="btn-primary">@Model.Value("ourStoryBottonText")</a>
+        <p>@Model?.Value("ourStoryText")</p>
+        <a href="@Model?.Value("ourStoryBottonLinkUrl")"class="btn-primary">@Model?.Value("ourStoryBottonText")</a>
     </div>
     <img src="@backgroundImage" alt="">
     </div>

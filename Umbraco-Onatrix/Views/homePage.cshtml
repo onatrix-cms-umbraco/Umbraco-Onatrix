@@ -4,8 +4,7 @@
 @{
 	Layout = "mainLayout.cshtml";
 
-  var backgroundImage = Model?.Value<IPublishedContent>("heroBackgroundImage")?.Url() ?? "";
-  var signatureImage = Model?.Value<IPublishedContent>("aboutSignatureImage")?.Url() ?? "";
+
 }
 
 @await Html.PartialAsync("partials/sections/hero.cshtml")

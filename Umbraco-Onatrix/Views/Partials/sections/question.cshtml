@@ -1,0 +1,32 @@
+﻿@using Umbraco.Cms.Core.Models
+@using Umbraco.Cms.Web.Common.PublishedModels;
+@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage
+@inject Umbraco.Cms.Web.Common.UmbracoHelper UmbracoHelper
+@{
+    var rootContents = UmbracoHelper.ContentAtRoot();
+    var settingsPage = rootContents.FirstOrDefault(x => x.ContentType.Alias == "settingsPage") ?? null;
+    var headline = settingsPage?.Value<string>("questionFormHeadline");
+    var namePlaceholder = settingsPage?.Value<string>("questionPlaceholderName");
+    var emailPlaceholder = settingsPage?.Value<string>("questionPlaceholderEmail");
+    var questionPlaceholder = settingsPage?.Value<string>("questionPlaceholderQuestion");
+    var formButton = settingsPage?.Value<string>("questionFormButtonText");
+
+
+
+
+
+}
+
+<section id="question">
+  <div class="container">
+    <h4>@headline</h4>
+    <form action="" class="form form-question">
+      <div class="grid-area">
+        <input class="name" type="text" placeholder="@namePlaceholder">
+        <input class="email" type="text" placeholder="@emailPlaceholder">
+        <textarea name="" id="" placeholder="@questionPlaceholder"></textarea>
+      </div>
+        <a href="" class="btn-primary">@formButton</a>
+    </form>
+  </div>
+</section>

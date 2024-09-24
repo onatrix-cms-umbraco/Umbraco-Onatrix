@@ -42,27 +42,7 @@
 }
 	</section>
 	<aside>
-		<div class="vl-line"></div>
-		<div class="content">
-		<div class="tags">
-			<h4>Tags</h4>
-			<a href="" class="btn-tag-light">Report</a>
-			<a href="" class="btn-tag-light">Busines plans</a>
-			<a href="" class="btn-tag-light">Insights</a>
-			<a href="" class="btn-tag-light">Business</a>
-			<a href="" class="btn-tag-light">App</a>
-			<a href="" class="btn-tag-light">Project</a>
-			<a href="" class="btn-tag-light">Finance</a>
-			<a href="" class="btn-tag-light">Pricing</a>
-		</div>
-		<div class="help-us-card bg-primary">
-			<h3>How can we help you?</h3>
-			<p>online support 24/7, we are here to help you</p>
-			<form action="">
-			<input type="email" placeholder="E-mail address">
-			</form>
-		</div>
-		</div>
+            @await Html.PartialAsync("partials/static/sidebar.cshtml")
 	</aside>
 	</div>
 </div>
