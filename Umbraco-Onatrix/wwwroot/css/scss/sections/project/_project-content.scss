@@ -1,5 +1,8 @@
 #project-contents {
     padding-bottom: 4rem;
+    border-right: 1px solid #ececec;
+    margin:1rem;
+
 
     .project-content {
         display: flex;
@@ -11,6 +14,7 @@
         &:last-child {
             border-bottom: none;
         }
+
 
         .text-container {
 

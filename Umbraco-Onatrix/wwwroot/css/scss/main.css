@@ -786,6 +786,8 @@ form select {
 
 #project-contents {
   padding-bottom: 4rem;
+  border-right: 1px solid #ececec;
+  margin: 1rem;
 }
 #project-contents .project-content {
   display: flex;

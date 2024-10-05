@@ -13,9 +13,9 @@
 
 @await Html.PartialAsync("partials/static/breadcrumb.cshtml")
 
-        <div class="container">
-          <div class="wrapper-aside-right">
-            <section id="project-contents">
+<div class="container">
+    <div class="wrapper-aside-right">
+    <section id="project-contents">
 
 @foreach (var item in selection)
 {
@@ -26,6 +26,7 @@
     var formattedDate = date.HasValue ? date.Value.ToString("MMMM dd, yyyy") : "No date available";
 		
     <div class="project-content">
+
         <div class="img-container">
             <img src="@imageUrl" alt="">
         </div>
@@ -46,4 +47,6 @@
 	</aside>
 	</div>
 </div>
+@await Html.PartialAsync("partials/static/nextProject.cshtml")
+
 
